@@ -38,12 +38,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.advancedPIC = new System.Windows.Forms.PictureBox();
             this.empPIC = new System.Windows.Forms.PictureBox();
             this.salaryPIC = new System.Windows.Forms.PictureBox();
             this.bonousPIC = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.homePIC = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
@@ -160,6 +160,16 @@
             this.label3.TabIndex = 12;
             this.label3.Text = "Home";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(16, 809);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 19);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Admin";
+            // 
             // advancedPIC
             // 
             this.advancedPIC.Image = global::Grifindo_Payroll_System.Properties.Resources.settings;
@@ -210,16 +220,6 @@
             this.pictureBox5.TabIndex = 7;
             this.pictureBox5.TabStop = false;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 809);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 19);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Admin";
-            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Grifindo_Payroll_System.Properties.Resources.people;
@@ -244,6 +244,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1606, 840);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

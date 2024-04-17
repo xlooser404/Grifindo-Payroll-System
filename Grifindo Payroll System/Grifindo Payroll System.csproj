@@ -64,6 +64,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adminPages\Advanced.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminPages\Advanced.Designer.cs">
+      <DependentUpon>Advanced.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminPages\Bonous.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminPages\Bonous.Designer.cs">
+      <DependentUpon>Bonous.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminPages\Salary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminPages\Salary.Designer.cs">
+      <DependentUpon>Salary.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,8 +102,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="adminPages\Advanced.resx">
+      <DependentUpon>Advanced.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="adminPages\Attendance.resx">
       <DependentUpon>Attendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminPages\Bonous.resx">
+      <DependentUpon>Bonous.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminPages\Salary.resx">
+      <DependentUpon>Salary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
