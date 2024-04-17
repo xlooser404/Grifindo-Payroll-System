@@ -76,11 +76,23 @@
     <Compile Include="adminPages\Bonous.Designer.cs">
       <DependentUpon>Bonous.cs</DependentUpon>
     </Compile>
+    <Compile Include="adminPages\Managers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminPages\Managers.Designer.cs">
+      <DependentUpon>Managers.cs</DependentUpon>
+    </Compile>
     <Compile Include="adminPages\Salary.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="adminPages\Salary.Designer.cs">
       <DependentUpon>Salary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminPages\Toys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminPages\Toys.Designer.cs">
+      <DependentUpon>Toys.cs</DependentUpon>
     </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -111,8 +123,14 @@
     <EmbeddedResource Include="adminPages\Bonous.resx">
       <DependentUpon>Bonous.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="adminPages\Managers.resx">
+      <DependentUpon>Managers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="adminPages\Salary.resx">
       <DependentUpon>Salary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminPages\Toys.resx">
+      <DependentUpon>Toys.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
