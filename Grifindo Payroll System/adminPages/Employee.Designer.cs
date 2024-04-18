@@ -38,15 +38,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.closePIC = new System.Windows.Forms.PictureBox();
             this.advancedPIC = new System.Windows.Forms.PictureBox();
             this.empPIC = new System.Windows.Forms.PictureBox();
             this.salaryPIC = new System.Windows.Forms.PictureBox();
             this.bonousPIC = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.homePIC = new System.Windows.Forms.PictureBox();
+            this.closePIC = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -74,7 +74,6 @@
             this.txtlogout = new System.Windows.Forms.Label();
             this.logoutPIC = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.closePIC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.advancedPIC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empPIC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salaryPIC)).BeginInit();
@@ -82,6 +81,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.homePIC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closePIC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbGend)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoutPIC)).BeginInit();
@@ -191,26 +191,6 @@
             this.label3.TabIndex = 12;
             this.label3.Text = "Home";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 809);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 19);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Admin";
-            // 
-            // closePIC
-            // 
-            this.closePIC.Image = global::Grifindo_Payroll_System.Properties.Resources.close;
-            this.closePIC.Location = new System.Drawing.Point(1550, 12);
-            this.closePIC.Name = "closePIC";
-            this.closePIC.Size = new System.Drawing.Size(44, 44);
-            this.closePIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.closePIC.TabIndex = 3;
-            this.closePIC.TabStop = false;
-            // 
             // advancedPIC
             // 
             this.advancedPIC.Image = global::Grifindo_Payroll_System.Properties.Resources.settings;
@@ -261,6 +241,16 @@
             this.pictureBox5.TabIndex = 7;
             this.pictureBox5.TabStop = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(16, 809);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 19);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Admin";
+            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Grifindo_Payroll_System.Properties.Resources.people;
@@ -280,6 +270,16 @@
             this.homePIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.homePIC.TabIndex = 2;
             this.homePIC.TabStop = false;
+            // 
+            // closePIC
+            // 
+            this.closePIC.Image = global::Grifindo_Payroll_System.Properties.Resources.close;
+            this.closePIC.Location = new System.Drawing.Point(1550, 12);
+            this.closePIC.Name = "closePIC";
+            this.closePIC.Size = new System.Drawing.Size(44, 44);
+            this.closePIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.closePIC.TabIndex = 3;
+            this.closePIC.TabStop = false;
             // 
             // label1
             // 
@@ -675,7 +675,6 @@
             this.Text = "1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.closePIC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.advancedPIC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empPIC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salaryPIC)).EndInit();
@@ -683,6 +682,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.homePIC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closePIC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbGend)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoutPIC)).EndInit();
