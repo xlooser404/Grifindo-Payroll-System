@@ -1,6 +1,6 @@
 ﻿namespace Grifindo_Payroll_System
 {
-    partial class Home
+    partial class adminHome
     {
         /// <summary>
         /// Required designer variable.

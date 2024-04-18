@@ -11,9 +11,9 @@ using ComponentFactory.Krypton.Toolkit;
 
 namespace Grifindo_Payroll_System
 {
-    public partial class Home : KryptonForm
+    public partial class adminHome : KryptonForm
     {
-        public Home()
+        public adminHome()
         {
             InitializeComponent();
         }

@@ -94,11 +94,11 @@
     <Compile Include="adminPages\Toys.Designer.cs">
       <DependentUpon>Toys.cs</DependentUpon>
     </Compile>
-    <Compile Include="Home.cs">
+    <Compile Include="adminHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
+    <Compile Include="adminHome.Designer.cs">
+      <DependentUpon>adminHome.cs</DependentUpon>
     </Compile>
     <Compile Include="adminPages\Attendance.cs">
       <SubType>Form</SubType>
@@ -111,6 +111,12 @@
     </Compile>
     <Compile Include="adminPages\Employee.Designer.cs">
       <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="managerHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="managerHome.Designer.cs">
+      <DependentUpon>managerHome.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -132,11 +138,14 @@
     <EmbeddedResource Include="adminPages\Toys.resx">
       <DependentUpon>Toys.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
+    <EmbeddedResource Include="adminHome.resx">
+      <DependentUpon>adminHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="adminPages\Employee.resx">
       <DependentUpon>Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="managerHome.resx">
+      <DependentUpon>managerHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -200,6 +209,8 @@
   <ItemGroup>
     <None Include="Resources\resume.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="managerPages\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
