@@ -64,6 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adminLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminLogin.Designer.cs">
+      <DependentUpon>adminLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="adminPages\Advanced.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,8 +124,17 @@
     <Compile Include="managerHome.Designer.cs">
       <DependentUpon>managerHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="managerLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="managerLogin.Designer.cs">
+      <DependentUpon>managerLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="adminLogin.resx">
+      <DependentUpon>adminLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="adminPages\Advanced.resx">
       <DependentUpon>Advanced.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="managerHome.resx">
       <DependentUpon>managerHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="managerLogin.resx">
+      <DependentUpon>managerLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -211,6 +229,18 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="managerPages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\github.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linkedin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\instagram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undraw_Pic_profile_re_7g2h.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
