@@ -242,5 +242,8 @@
   <ItemGroup>
     <None Include="Resources\undraw_Pic_profile_re_7g2h.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loupe.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
