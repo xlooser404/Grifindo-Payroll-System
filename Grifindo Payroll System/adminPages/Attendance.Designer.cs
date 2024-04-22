@@ -51,7 +51,7 @@
             this.txtName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.period = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.dtperiod = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.txtPresent = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.txtAbsence = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -292,6 +292,7 @@
             this.cbEmpID.StateCommon.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.cbEmpID.TabIndex = 84;
             this.cbEmpID.Text = "EmpID";
+            this.cbEmpID.SelectionChangeCommitted += new System.EventHandler(this.cbEmpID_SelectionChangeCommitted);
             // 
             // label20
             // 
@@ -305,6 +306,7 @@
             // 
             // txtName
             // 
+            this.txtName.Enabled = false;
             this.txtName.Location = new System.Drawing.Point(320, 169);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(246, 35);
@@ -338,22 +340,22 @@
             this.label18.TabIndex = 86;
             this.label18.Text = "Period";
             // 
-            // period
+            // dtperiod
             // 
-            this.period.Location = new System.Drawing.Point(605, 169);
-            this.period.Name = "period";
-            this.period.Size = new System.Drawing.Size(238, 36);
-            this.period.StateCommon.Border.Color1 = System.Drawing.Color.SpringGreen;
-            this.period.StateCommon.Border.Color2 = System.Drawing.Color.SpringGreen;
-            this.period.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.dtperiod.Location = new System.Drawing.Point(605, 169);
+            this.dtperiod.Name = "dtperiod";
+            this.dtperiod.Size = new System.Drawing.Size(238, 36);
+            this.dtperiod.StateCommon.Border.Color1 = System.Drawing.Color.SpringGreen;
+            this.dtperiod.StateCommon.Border.Color2 = System.Drawing.Color.SpringGreen;
+            this.dtperiod.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.period.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.period.StateCommon.Border.Rounding = 20;
-            this.period.StateCommon.Content.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.period.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.period.TabIndex = 85;
-            this.period.ValueNullable = new System.DateTime(2024, 4, 17, 12, 18, 12, 0);
+            this.dtperiod.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.dtperiod.StateCommon.Border.Rounding = 20;
+            this.dtperiod.StateCommon.Content.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtperiod.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.dtperiod.TabIndex = 85;
+            this.dtperiod.ValueNullable = new System.DateTime(2024, 4, 17, 12, 18, 12, 0);
             // 
             // txtPresent
             // 
@@ -452,6 +454,7 @@
             // 
             // txtNic
             // 
+            this.txtNic.Enabled = false;
             this.txtNic.Location = new System.Drawing.Point(539, 238);
             this.txtNic.Name = "txtNic";
             this.txtNic.Size = new System.Drawing.Size(246, 35);
@@ -477,6 +480,7 @@
             // 
             // txtContact
             // 
+            this.txtContact.Enabled = false;
             this.txtContact.Location = new System.Drawing.Point(812, 238);
             this.txtContact.Name = "txtContact";
             this.txtContact.Size = new System.Drawing.Size(246, 35);
@@ -563,6 +567,7 @@
             this.btnUpdate.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btnUpdate.TabIndex = 107;
             this.btnUpdate.Values.Text = "Update";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -598,6 +603,7 @@
             this.btnDelete.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btnDelete.TabIndex = 106;
             this.btnDelete.Values.Text = "Delete";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSave
             // 
@@ -644,6 +650,7 @@
             this.picSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picSearch.TabIndex = 110;
             this.picSearch.TabStop = false;
+            this.picSearch.Click += new System.EventHandler(this.picSearch_Click);
             // 
             // label19
             // 
@@ -699,7 +706,7 @@
             this.Controls.Add(this.txtPresent);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.period);
+            this.Controls.Add(this.dtperiod);
             this.Controls.Add(this.cbEmpID);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.txtName);
@@ -753,7 +760,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtName;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label18;
-        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker period;
+        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dtperiod;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtPresent;
         private System.Windows.Forms.Label label17;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtAbsence;
