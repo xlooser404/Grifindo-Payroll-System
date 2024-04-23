@@ -154,7 +154,7 @@ namespace Grifindo_Payroll_System.Pages
                 using (SqlCommand cmd = new SqlCommand("DELETE FROM EmployeeTbl WHERE empNic = @eNic", Connection))
                 {
                     // Add parameter with appropriate data type
-                    cmd.Parameters.Add("@empNIC", SqlDbType.VarChar).Value = eNic;
+                    cmd.Parameters.Add("@empNic", SqlDbType.VarChar).Value = eNic;
 
                     // Execute the command
                     cmd.ExecuteNonQuery();

@@ -111,8 +111,8 @@ namespace Grifindo_Payroll_System.Pages
                 // Validate user input to ensure all fields are filled in
                 if (string.IsNullOrEmpty(txtPresent.Text) ||
                     string.IsNullOrEmpty(txtName.Text) ||
-                    string.IsNullOrEmpty (txtContact.Text) ||
-                    string.IsNullOrEmpty (txtNic.Text) ||
+                    string.IsNullOrEmpty(txtContact.Text) ||
+                    string.IsNullOrEmpty(txtNic.Text) ||
                     string.IsNullOrEmpty(txtExcuses.Text) ||
                     string.IsNullOrEmpty(txtAbsence.Text))
                 {
@@ -125,7 +125,7 @@ namespace Grifindo_Payroll_System.Pages
                 string period = dtperiod.Value.Month + " - " + dtperiod.Value.Year;
 
                 // Create SQL command with parameters
-                using (SqlCommand cmd = new SqlCommand("INSERT INTO EmployeeTbl (empID, empName, dayPresent, dayAbsence, dayExcuse, period, empNic, empContact) VALUES (@eID, @eName, @eDPresent, @eDAbsence, @eDExcuse, @APeriod, @eNic, @eContact)", Connection))
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO AttendenceTbl (empID, empName, dayPresent, dayAbsence, dayExcuse, period, empNic, empContact) VALUES (@eID, @eName, @eDPresent, @eDAbsence, @eDExcuse, @APeriod, @eNic, @eContact)", Connection))
                 {
                     // Add parameters with appropriate data types
                     cmd.Parameters.AddWithValue("@eID", cbEmpID.Text);
@@ -135,8 +135,8 @@ namespace Grifindo_Payroll_System.Pages
                     cmd.Parameters.AddWithValue("@eDExcuse", txtExcuses.Text);
                     cmd.Parameters.AddWithValue("@eNic", txtNic.Text);
                     cmd.Parameters.AddWithValue("@APeriod", period);
-                    cmd.Parameters.AddWithValue("@eContact",txtContact.Text );
-                    
+                    cmd.Parameters.AddWithValue("@eContact", txtContact.Text);
+
 
                     // Execute the command
                     cmd.ExecuteNonQuery();
@@ -161,53 +161,50 @@ namespace Grifindo_Payroll_System.Pages
             Clear_Data();
         }
 
-        // Attendence Update button Function 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void btnDelete_Click(object sender, EventArgs e)
         {
             try
             {
-                // Validate user input to ensure essential fields are filled
-                if (string.IsNullOrEmpty(txtPresent.Text) ||
-                    string.IsNullOrEmpty(txtAbsence.Text) ||
-                    string.IsNullOrEmpty(txtExcuses.Text))
+                // Ensure a row is selected
+                if (AttendenceDGV.SelectedRows.Count == 0)
                 {
-                    MessageBox.Show("Please fill in Present Days, Absent Days and Excuses fields.");
+                    MessageBox.Show("Please select a Employee to delete.");
                     return;
                 }
+
+                // Confirm deletion with the user
+                DialogResult result = MessageBox.Show("Are you sure you want to delete this Attedence?", "Confirm Deletion", MessageBoxButtons.YesNo);
+                if (result == DialogResult.No)
+                {
+                    return;
+                }
+
+                // Get the model number of the selected Part
+                string eNic = AttendenceDGV.SelectedRows[0].Cells["empNic"].Value.ToString();
 
                 // Open database connection
                 Connection.Open();
 
-                // Prepare the SQL update statement with parameters
-                string updateQuery = "UPDATE AttendenceTbl SET dayPresent = @eDPresent, dayAbsence = @eDAbsence, dayExcuse = @eDExcuse WHERE empID = @eID";
-                using (SqlCommand cmd = new SqlCommand(updateQuery, Connection))
+                // Create SQL command with parameter
+                using (SqlCommand cmd = new SqlCommand("DELETE FROM  WHERE empNic = @eNic", Connection))
                 {
-                    // Add parameters with appropriate data types
-                    cmd.Parameters.AddWithValue("@eID", cbEmpID.SelectedValue);
-                    cmd.Parameters.AddWithValue("@eDPresent", txtPresent.Text);
-                    cmd.Parameters.AddWithValue("@eDAbsence", txtAbsence.Text);
-                    cmd.Parameters.AddWithValue("@eDExcuse", txtExcuses.Text);
+                    // Add parameter with appropriate data type
+                    cmd.Parameters.Add("@empNic", SqlDbType.VarChar).Value = eNic;
 
-                    // Execute the update command
-                    int rowsUpdated = cmd.ExecuteNonQuery();
-
-                    // Check if any rows were updated
-                    if (rowsUpdated > 0)
-                    {
-                        MessageBox.Show("Attendance Updated Successfully!");
-                    }
-                    else
-                    {
-                        MessageBox.Show("No records found to update.");
-                    }
+                    // Execute the command
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Attedence deleted successfully!");
                 }
 
-                // Refresh the Attendance list display
+                // Refresh the Part list display
                 AttendenceList();
+
+                // Clear Data in Text boxes
+                Clear_Data();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error updating Attendance: {ex.Message}");
+                MessageBox.Show($"Error deleting Attedence: {ex.Message}");
                 // Consider logging the error for debugging
             }
             finally
@@ -215,68 +212,98 @@ namespace Grifindo_Payroll_System.Pages
                 // Close database connection even in case of errors
                 Connection.Close();
             }
-
-            // Optionally, clear form fields after successful update
-             Clear_Data();
         }
 
-        // Data Delete button click event Function 
-        private void btnDelete_Click(object sender, EventArgs e)
+        // Data Grid View Cell Click Function 
+        private void AttendenceDGV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (MessageBox.Show("Are you sure you want to delete this attendance record?", "Confirm Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (e.RowIndex >= 0)
             {
-                try
-                {
-                    // Validate selection
-                    if (cbEmpID.SelectedIndex == -1)
-                    {
-                        MessageBox.Show("Please select an employee record to delete.");
-                        return;
-                    }
+                // Access the selected row
+                DataGridViewRow selectedRow = AttendenceDGV.Rows[e.RowIndex];
 
-                    // Open database connection
-                    Connection.Open();
-
-                    // Prepare the SQL delete statement with a parameter
-                    string deleteQuery = "DELETE FROM AttendenceTbl WHERE empID = @eID";
-                    using (SqlCommand cmd = new SqlCommand(deleteQuery, Connection))
-                    {
-                        // Add parameter with appropriate data type
-                        cmd.Parameters.AddWithValue("@eID", cbEmpID.SelectedValue);
-
-                        // Execute the delete command
-                        int rowsDeleted = cmd.ExecuteNonQuery();
-
-                        // Check if any rows were deleted
-                        if (rowsDeleted > 0)
-                        {
-                            MessageBox.Show("Attendance record deleted successfully!");
-                            // Clear form fields after successful deletion (optional)
-                            Clear_Data();
-                        }
-                        else
-                        {
-                            MessageBox.Show("No records found to delete.");
-                        }
-                    }
-
-                    // Refresh the Attendance list display
-                    AttendenceList();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error deleting Attendance record: {ex.Message}");
-                    // Consider logging the error for debugging
-                }
-                finally
-                {
-                    // Close database connection even in case of errors
-                    Connection.Close();
-                }
+                // Retrieve data from the row's cells and assign to textboxes 
+                cbEmpID.Text = selectedRow.Cells["empID"].Value.ToString();
+                txtName.Text = selectedRow.Cells["empName"].Value.ToString();
+                dtperiod.Value = (DateTime)selectedRow.Cells["period"].Value; // Cast to DateTime
+                txtPresent.Text = selectedRow.Cells["dayPresent"].Value.ToString();
+                txtAbsence.Text = selectedRow.Cells["dayAbsence"].Value.ToString();
+                txtExcuses.Text = selectedRow.Cells["dayExcuse"].Value.ToString();
+                txtNic.Text = selectedRow.Cells["empNic"].Value.ToString();
+                txtContact.Text = selectedRow.Cells["empContact"].Value.ToString();
             }
         }
 
-        // Search button click event
+        //  Update button click Event 
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Validate user input to ensure all fields are filled in
+                if (string.IsNullOrEmpty(txtPresent.Text) ||
+                    string.IsNullOrEmpty(txtName.Text) ||
+                    string.IsNullOrEmpty(txtContact.Text) ||
+                    string.IsNullOrEmpty(txtNic.Text) ||
+                    string.IsNullOrEmpty(txtExcuses.Text) ||
+                    string.IsNullOrEmpty(txtAbsence.Text))
+                {
+                    MessageBox.Show("Please fill in all fields.");
+                    return;
+                }
+
+                // Ensure a row is selected
+                if (AttendenceDGV.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("Please select an attendance record to update.");
+                    return;
+                }
+
+                // Get the selected employee's NIC for identification
+                string selectedNic = AttendenceDGV.SelectedRows[0].Cells["empNic"].Value.ToString();
+
+                // Open database connection
+                Connection.Open();
+
+                string period = dtperiod.Value.Month + " - " + dtperiod.Value.Year;
+
+                // Create SQL command with parameters for update
+                using (SqlCommand cmd = new SqlCommand(
+                  "UPDATE AttendenceTbl SET empID = @eID, empName = @eName, dayPresent = @eDPresent, dayAbsence = @eDAbsence, dayExcuse = @eDExcuse, period = @APeriod, empContact = @eContact WHERE empNic = @eNic", Connection))
+                {
+                    // Add parameters with appropriate data types
+                    cmd.Parameters.AddWithValue("@eID", cbEmpID.Text);
+                    cmd.Parameters.AddWithValue("@eName", txtName.Text);
+                    cmd.Parameters.AddWithValue("@eDPresent", txtPresent.Text);
+                    cmd.Parameters.AddWithValue("@eDAbsence", txtAbsence.Text);
+                    cmd.Parameters.AddWithValue("@eDExcuse", txtExcuses.Text);
+                    cmd.Parameters.AddWithValue("@eNic", selectedNic); // Use selected NIC for update
+                    cmd.Parameters.AddWithValue("@APeriod", period);
+                    cmd.Parameters.AddWithValue("@eContact", txtContact.Text);
+
+                    // Execute the update command
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Attendance record updated successfully!");
+                }
+
+                // Refresh the attendance list display
+                AttendenceList();
+
+                // Clear form fields (optional)
+                Clear_Data();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error updating attendance: {ex.Message}");
+                // Consider logging the error for debugging
+            }
+            finally
+            {
+                // Close database connection even in case of errors
+                Connection.Close();
+            }
+        }
+
+        // Search ico click event
         private void picSearch_Click(object sender, EventArgs e)
         {
             TextboxFilter();

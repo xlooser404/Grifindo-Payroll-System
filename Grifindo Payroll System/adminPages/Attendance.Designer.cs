@@ -512,6 +512,7 @@
             this.AttendenceDGV.Name = "AttendenceDGV";
             this.AttendenceDGV.Size = new System.Drawing.Size(1410, 418);
             this.AttendenceDGV.TabIndex = 102;
+            this.AttendenceDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AttendenceDGV_CellClick);
             // 
             // txtlogout
             // 
