@@ -1,4 +1,5 @@
-﻿using Grifindo_Payroll_System.Pages;
+﻿using Grifindo_Payroll_System.adminPages;
+using Grifindo_Payroll_System.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace Grifindo_Payroll_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Attendance());
+            Application.Run(new Salary());
         }
     }
 }

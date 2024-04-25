@@ -17,6 +17,10 @@ namespace Grifindo_Payroll_System.adminPages
         public Salary()
         {
             InitializeComponent();
+            SalaryList();
+            getEmployeeID();
+            getAttendence();
+            getBonous();
         }
 
         // Sql Data Connection
@@ -24,9 +28,9 @@ namespace Grifindo_Payroll_System.adminPages
         // Sql Data Connection
 
         // Display Attendence Details
-        private void AttendenceList()
+        private void SalaryList()
         {
-            string query = "SELECT empID, empName, dayPresent, dayAbsence, dayExcuse, period, empNic, empContact FROM AttendenceTbl";
+            string query = "SELECT salID, empID, empName, empBSal, empBonous, empAdvanced, empOT, empBalance, salPeriod FROM SalaryTbl";
             using (SqlConnection connection = new SqlConnection("Data Source=TUF-GAMING-F15\\SQLEXPRESS;Initial Catalog=GrifindoToys;Integrated Security=True;Encrypt=False"))
             {
                 using (SqlDataAdapter adapter = new SqlDataAdapter(query, connection))
@@ -44,7 +48,7 @@ namespace Grifindo_Payroll_System.adminPages
         private void TextboxFilter()
         {
             Connection.Open();
-            string query = " SELECT * from AttendenceTbl where empNic ='" + txtSearch.Text + "'";
+            string query = " SELECT * from SalaryTbl where empNic ='" + txtSearch.Text + "'";
             SqlDataAdapter adapter = new SqlDataAdapter(query, Connection);
             DataTable dataTable = new DataTable();
             adapter.Fill(dataTable);
@@ -54,16 +58,7 @@ namespace Grifindo_Payroll_System.adminPages
 
         }
 
-        // Clear Function 
-        private void Clear_Data()
-        {
-            txtName.Text = "";
-            txtAbsence.Text = "";
-            txtPresent.Text = "";
-            txtExcuses.Text = "";
-        }
-
-        // Get Employee ID to Attendence form
+        // Get Employee ID to Salary issue form
         private void getEmployeeID()
         {
             Connection.Open();
@@ -77,27 +72,135 @@ namespace Grifindo_Payroll_System.adminPages
             Connection.Close();
         }
 
+        // Get Attendence to to Salary issue form
+        private void getAttendence()
+        {
+            if (cbEmpID.SelectedIndex > -1) // Check if an item is selected
+            {
+                Connection.Open();
+                int selectedEmpID = int.Parse(cbEmpID.SelectedValue.ToString()); // Convert to integer
+                SqlCommand cmd = new SqlCommand("Select * from AttendenceTbl Where empID = @empID", Connection);
+                cmd.Parameters.AddWithValue("@empID", selectedEmpID); // Use parameter for safe value assignment
+                                                                      // Rest of the code...
+            }
+            else
+            {
+                // Handle no selection case (optional: display message)
+            }
+            Connection.Close();
+        }
+
+        // Get Bonous to Salary issue form
+        private void getBonous()
+        {
+            if (cbBonous.SelectedIndex > -1) // Check if an item is selected
+            {
+                Connection.Open();
+                SqlCommand cmd = new SqlCommand("Select * from BonousTbl where bonousName" + cbBonous.SelectedValue.ToString() + "", Connection);
+                // Rest of the code...
+            }
+            else
+            {
+                // Handle no selection case (optional: display message)
+            }
+            Connection.Close();
+        }
+
         // Get Employee Names, contact, Nic using empID
         private void getEmployeedetails()
         {
-            Connection.Open();
-            String Query = "Select * from EmployeeTbl where empID" + cbEmpID.SelectedValue.ToString() + "'";
-            SqlCommand cmd = new SqlCommand(Query, Connection);
-            DataTable dataTable = new DataTable();
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            adapter.Fill(dataTable);
-            foreach (DataRow dataRow in dataTable.Rows)
+            if (cbEmpID.SelectedIndex > -1) // Check if an item is selected
             {
-                txtName.Text = dataRow["empName"].ToString();
-                txtNic.Text = dataRow["empNic"].ToString();
-                txtContact.Text = dataRow["empContact"].ToString();
+                Connection.Open();
+                int selectedEmpID = int.Parse(cbEmpID.SelectedValue.ToString()); // Convert to integer
+                SqlCommand cmd = new SqlCommand("Select * from EmployeeTbl where empID = @empID", Connection);
+                cmd.Parameters.AddWithValue("@empID", selectedEmpID); // Use parameter for safe value assignment
+                DataTable dataTable = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dataTable);
+                if (dataTable.Rows.Count > 0) // Check if data exists for selected ID
+                {
+                    DataRow dataRow = dataTable.Rows[0];
+                    txtName.Text = dataRow["empName"].ToString();
+                    txtNic.Text = dataRow["empNic"].ToString();
+                    txtBSalary.Text = dataRow["empContact"].ToString();
+                }
+                else
+                {
+                    // Handle case where no employee found (optional: display message)
+                }
             }
+            Connection.Close();
         }
 
-        // cbEmpID combo box ID selection 
+        // Get Bonous Amount
+        private void getBonousAmt()
+        {
+            if (cbEmpID.SelectedIndex > -1) // Check if an item is selected
+            {
+                Connection.Open();
+                int selectedBName = int.Parse(cbBonous.SelectedValue.ToString()); // Convert to integer
+                SqlCommand cmd = new SqlCommand("Select * from BonousTbl where bonousName = @BName", Connection);
+                cmd.Parameters.AddWithValue("@BName", selectedBName); // Use parameter for safe value assignment
+                DataTable dataTable = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dataTable);
+                if (dataTable.Rows.Count > 0) // Check if data exists for selected ID
+                {
+                    DataRow dataRow = dataTable.Rows[0];
+                    txtBonous.Text = dataRow["bounousAmount"].ToString();
+                }
+                else
+                {
+                    // Handle case where no employee found (optional: display message)
+                }
+            }
+            Connection.Close();
+        }
+
+        // Get Bonous Amount
+        private void getAttedenceData()
+        {
+            if (cbEmpID.SelectedIndex > -1) // Check if an item is selected
+            {
+                Connection.Open();
+                int selectedatID = int.Parse(cbAttend.SelectedValue.ToString()); // Convert to integer
+                SqlCommand cmd = new SqlCommand("Select * from AttendenceTbl where AttendID = @atID", Connection);
+                cmd.Parameters.AddWithValue("@atID", selectedatID); // Use parameter for safe value assignment
+                DataTable dataTable = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dataTable);
+                if (dataTable.Rows.Count > 0) // Check if data exists for selected ID
+                {
+                    DataRow dataRow = dataTable.Rows[0];
+                    txtAbsence.Text = dataRow["dayAbsence"].ToString();
+                    txtExcuses.Text = dataRow["dayExcuse"].ToString();
+                    txtpresence.Text = dataRow["dayPresent"].ToString();
+                }
+                else
+                {
+                    // Handle case where no employee found (optional: display message)
+                }
+            }
+            Connection.Close();
+        }
+
+        // Combo box empID Selection function Calling
         private void cbEmpID_SelectionChangeCommitted(object sender, EventArgs e)
         {
             getEmployeedetails();
+            getAttendence();
+        }
+
+        // Combo Box Bonous Name Selection function calling
+        private void cbBonous_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            getBonousAmt();
+        }
+
+        private void cbAttend_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            getAttedenceData();   
         }
     }
 }

@@ -64,25 +64,25 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.closePIC = new System.Windows.Forms.PictureBox();
-            this.txtAdvance = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtOT = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.cbEmpID = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.txtLoan = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtpresence = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.btnUpdate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnCompute = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnDelete = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnSave = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.picSearch = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtSearch = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.cbBonousID = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.cbBonous = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtAbsence = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.kryptonComboBox1 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.cbAttend = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.kryptonTextBox2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtExcuses = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.advancedPIC)).BeginInit();
@@ -97,8 +97,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.closePIC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbEmpID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbBonousID)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbBonous)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbAttend)).BeginInit();
             this.SuspendLayout();
             // 
             // CommonPal
@@ -343,6 +343,7 @@
             // 
             // txtBonous
             // 
+            this.txtBonous.Enabled = false;
             this.txtBonous.Location = new System.Drawing.Point(897, 151);
             this.txtBonous.Name = "txtBonous";
             this.txtBonous.Size = new System.Drawing.Size(184, 35);
@@ -499,20 +500,20 @@
             this.closePIC.TabIndex = 50;
             this.closePIC.TabStop = false;
             // 
-            // txtAdvance
+            // txtOT
             // 
-            this.txtAdvance.Location = new System.Drawing.Point(1310, 150);
-            this.txtAdvance.Name = "txtAdvance";
-            this.txtAdvance.Size = new System.Drawing.Size(199, 35);
-            this.txtAdvance.StateCommon.Border.Color1 = System.Drawing.Color.SpringGreen;
-            this.txtAdvance.StateCommon.Border.Color2 = System.Drawing.Color.SpringGreen;
-            this.txtAdvance.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtOT.Location = new System.Drawing.Point(1310, 150);
+            this.txtOT.Name = "txtOT";
+            this.txtOT.Size = new System.Drawing.Size(199, 35);
+            this.txtOT.StateCommon.Border.Color1 = System.Drawing.Color.SpringGreen;
+            this.txtOT.StateCommon.Border.Color2 = System.Drawing.Color.SpringGreen;
+            this.txtOT.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtAdvance.StateCommon.Border.Rounding = 20;
-            this.txtAdvance.StateCommon.Border.Width = 1;
-            this.txtAdvance.TabIndex = 78;
-            this.txtAdvance.Text = "Advanced";
+            this.txtOT.StateCommon.Border.Rounding = 20;
+            this.txtOT.StateCommon.Border.Width = 1;
+            this.txtOT.TabIndex = 78;
+            this.txtOT.Text = "Advanced";
             // 
             // label19
             // 
@@ -545,6 +546,7 @@
             this.cbEmpID.StateCommon.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.cbEmpID.TabIndex = 80;
             this.cbEmpID.Text = "EmpID";
+            this.cbEmpID.SelectionChangeCommitted += new System.EventHandler(this.cbEmpID_SelectionChangeCommitted);
             // 
             // label20
             // 
@@ -556,20 +558,20 @@
             this.label20.TabIndex = 79;
             this.label20.Text = "Employee ID";
             // 
-            // txtLoan
+            // txtpresence
             // 
-            this.txtLoan.Location = new System.Drawing.Point(1071, 222);
-            this.txtLoan.Name = "txtLoan";
-            this.txtLoan.Size = new System.Drawing.Size(97, 35);
-            this.txtLoan.StateCommon.Border.Color1 = System.Drawing.Color.SpringGreen;
-            this.txtLoan.StateCommon.Border.Color2 = System.Drawing.Color.SpringGreen;
-            this.txtLoan.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtpresence.Location = new System.Drawing.Point(1071, 222);
+            this.txtpresence.Name = "txtpresence";
+            this.txtpresence.Size = new System.Drawing.Size(97, 35);
+            this.txtpresence.StateCommon.Border.Color1 = System.Drawing.Color.SpringGreen;
+            this.txtpresence.StateCommon.Border.Color2 = System.Drawing.Color.SpringGreen;
+            this.txtpresence.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtLoan.StateCommon.Border.Rounding = 20;
-            this.txtLoan.StateCommon.Border.Width = 1;
-            this.txtLoan.TabIndex = 82;
-            this.txtLoan.Text = "presence";
+            this.txtpresence.StateCommon.Border.Rounding = 20;
+            this.txtpresence.StateCommon.Border.Width = 1;
+            this.txtpresence.TabIndex = 82;
+            this.txtpresence.Text = "presence";
             // 
             // label21
             // 
@@ -581,40 +583,40 @@
             this.label21.TabIndex = 81;
             this.label21.Text = "Presence";
             // 
-            // btnUpdate
+            // btnCompute
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(572, 303);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(118, 33);
-            this.btnUpdate.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.btnUpdate.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.btnUpdate.StateCommon.Border.Color1 = System.Drawing.Color.SpringGreen;
-            this.btnUpdate.StateCommon.Border.Color2 = System.Drawing.Color.SpringGreen;
-            this.btnUpdate.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.btnCompute.Location = new System.Drawing.Point(572, 303);
+            this.btnCompute.Name = "btnCompute";
+            this.btnCompute.Size = new System.Drawing.Size(118, 33);
+            this.btnCompute.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.btnCompute.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.btnCompute.StateCommon.Border.Color1 = System.Drawing.Color.SpringGreen;
+            this.btnCompute.StateCommon.Border.Color2 = System.Drawing.Color.SpringGreen;
+            this.btnCompute.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnUpdate.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnUpdate.StateCommon.Border.Rounding = 15;
-            this.btnUpdate.StateCommon.Border.Width = 1;
-            this.btnUpdate.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnUpdate.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.SpringGreen;
-            this.btnUpdate.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.SpringGreen;
-            this.btnUpdate.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.StatePressed.Back.Color1 = System.Drawing.Color.Lime;
-            this.btnUpdate.StatePressed.Back.Color2 = System.Drawing.Color.Lime;
-            this.btnUpdate.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btnUpdate.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.btnUpdate.StateTracking.Back.Color1 = System.Drawing.Color.Lime;
-            this.btnUpdate.StateTracking.Back.Color2 = System.Drawing.Color.Lime;
-            this.btnUpdate.StateTracking.Border.Color1 = System.Drawing.Color.Lime;
-            this.btnUpdate.StateTracking.Border.Color2 = System.Drawing.Color.Lime;
-            this.btnUpdate.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.btnCompute.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnCompute.StateCommon.Border.Rounding = 15;
+            this.btnCompute.StateCommon.Border.Width = 1;
+            this.btnCompute.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnCompute.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.SpringGreen;
+            this.btnCompute.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.SpringGreen;
+            this.btnCompute.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCompute.StatePressed.Back.Color1 = System.Drawing.Color.Lime;
+            this.btnCompute.StatePressed.Back.Color2 = System.Drawing.Color.Lime;
+            this.btnCompute.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnCompute.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnCompute.StateTracking.Back.Color1 = System.Drawing.Color.Lime;
+            this.btnCompute.StateTracking.Back.Color2 = System.Drawing.Color.Lime;
+            this.btnCompute.StateTracking.Border.Color1 = System.Drawing.Color.Lime;
+            this.btnCompute.StateTracking.Border.Color2 = System.Drawing.Color.Lime;
+            this.btnCompute.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnUpdate.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btnUpdate.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.btnUpdate.TabIndex = 85;
-            this.btnUpdate.Values.Text = "Update";
+            this.btnCompute.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnCompute.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnCompute.TabIndex = 85;
+            this.btnCompute.Values.Text = "Calculate";
             // 
             // btnDelete
             // 
@@ -722,27 +724,27 @@
             this.txtSearch.TabIndex = 86;
             this.txtSearch.Text = "type Nic";
             // 
-            // cbBonousID
+            // cbBonous
             // 
-            this.cbBonousID.DropDownWidth = 234;
-            this.cbBonousID.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.cbBonousID.Location = new System.Drawing.Point(1130, 151);
-            this.cbBonousID.Name = "cbBonousID";
-            this.cbBonousID.Size = new System.Drawing.Size(139, 34);
-            this.cbBonousID.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.SpringGreen;
-            this.cbBonousID.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.SpringGreen;
-            this.cbBonousID.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.cbBonous.DropDownWidth = 234;
+            this.cbBonous.Items.AddRange(new object[] {
+            ""});
+            this.cbBonous.Location = new System.Drawing.Point(1130, 151);
+            this.cbBonous.Name = "cbBonous";
+            this.cbBonous.Size = new System.Drawing.Size(139, 34);
+            this.cbBonous.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.SpringGreen;
+            this.cbBonous.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.SpringGreen;
+            this.cbBonous.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.cbBonousID.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.cbBonousID.StateCommon.ComboBox.Border.Rounding = 20;
-            this.cbBonousID.StateCommon.ComboBox.Border.Width = 1;
-            this.cbBonousID.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbBonousID.StateCommon.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.cbBonousID.TabIndex = 90;
-            this.cbBonousID.Text = "BonousID";
+            this.cbBonous.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.cbBonous.StateCommon.ComboBox.Border.Rounding = 20;
+            this.cbBonous.StateCommon.ComboBox.Border.Width = 1;
+            this.cbBonous.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbBonous.StateCommon.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.cbBonous.TabIndex = 90;
+            this.cbBonous.Text = "Bonous Name";
+            this.cbBonous.SelectionChangeCommitted += new System.EventHandler(this.cbBonous_SelectionChangeCommitted);
             // 
             // label11
             // 
@@ -750,24 +752,24 @@
             this.label11.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(1126, 126);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(69, 22);
+            this.label11.Size = new System.Drawing.Size(93, 22);
             this.label11.TabIndex = 89;
-            this.label11.Text = "Bonous ID";
+            this.label11.Text = "Bonous Name";
             // 
-            // kryptonTextBox1
+            // txtAbsence
             // 
-            this.kryptonTextBox1.Location = new System.Drawing.Point(1196, 220);
-            this.kryptonTextBox1.Name = "kryptonTextBox1";
-            this.kryptonTextBox1.Size = new System.Drawing.Size(104, 35);
-            this.kryptonTextBox1.StateCommon.Border.Color1 = System.Drawing.Color.SpringGreen;
-            this.kryptonTextBox1.StateCommon.Border.Color2 = System.Drawing.Color.SpringGreen;
-            this.kryptonTextBox1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtAbsence.Location = new System.Drawing.Point(1196, 220);
+            this.txtAbsence.Name = "txtAbsence";
+            this.txtAbsence.Size = new System.Drawing.Size(104, 35);
+            this.txtAbsence.StateCommon.Border.Color1 = System.Drawing.Color.SpringGreen;
+            this.txtAbsence.StateCommon.Border.Color2 = System.Drawing.Color.SpringGreen;
+            this.txtAbsence.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox1.StateCommon.Border.Rounding = 20;
-            this.kryptonTextBox1.StateCommon.Border.Width = 1;
-            this.kryptonTextBox1.TabIndex = 92;
-            this.kryptonTextBox1.Text = "Absence";
+            this.txtAbsence.StateCommon.Border.Rounding = 20;
+            this.txtAbsence.StateCommon.Border.Width = 1;
+            this.txtAbsence.TabIndex = 92;
+            this.txtAbsence.Text = "Absence";
             // 
             // label12
             // 
@@ -779,27 +781,25 @@
             this.label12.TabIndex = 91;
             this.label12.Text = "Absence";
             // 
-            // kryptonComboBox1
+            // cbAttend
             // 
-            this.kryptonComboBox1.DropDownWidth = 234;
-            this.kryptonComboBox1.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.kryptonComboBox1.Location = new System.Drawing.Point(906, 222);
-            this.kryptonComboBox1.Name = "kryptonComboBox1";
-            this.kryptonComboBox1.Size = new System.Drawing.Size(139, 34);
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.SpringGreen;
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.SpringGreen;
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.cbAttend.DropDownWidth = 234;
+            this.cbAttend.Location = new System.Drawing.Point(906, 222);
+            this.cbAttend.Name = "cbAttend";
+            this.cbAttend.Size = new System.Drawing.Size(139, 34);
+            this.cbAttend.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.SpringGreen;
+            this.cbAttend.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.SpringGreen;
+            this.cbAttend.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.Rounding = 20;
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.Width = 1;
-            this.kryptonComboBox1.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonComboBox1.StateCommon.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.kryptonComboBox1.TabIndex = 94;
-            this.kryptonComboBox1.Text = "AttedenceID";
+            this.cbAttend.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.cbAttend.StateCommon.ComboBox.Border.Rounding = 20;
+            this.cbAttend.StateCommon.ComboBox.Border.Width = 1;
+            this.cbAttend.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbAttend.StateCommon.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.cbAttend.TabIndex = 94;
+            this.cbAttend.Text = "AttedenceID";
+            this.cbAttend.SelectionChangeCommitted += new System.EventHandler(this.cbAttend_SelectionChangeCommitted);
             // 
             // label22
             // 
@@ -811,20 +811,20 @@
             this.label22.TabIndex = 93;
             this.label22.Text = "Attendence ID";
             // 
-            // kryptonTextBox2
+            // txtExcuses
             // 
-            this.kryptonTextBox2.Location = new System.Drawing.Point(1333, 220);
-            this.kryptonTextBox2.Name = "kryptonTextBox2";
-            this.kryptonTextBox2.Size = new System.Drawing.Size(104, 35);
-            this.kryptonTextBox2.StateCommon.Border.Color1 = System.Drawing.Color.SpringGreen;
-            this.kryptonTextBox2.StateCommon.Border.Color2 = System.Drawing.Color.SpringGreen;
-            this.kryptonTextBox2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtExcuses.Location = new System.Drawing.Point(1333, 220);
+            this.txtExcuses.Name = "txtExcuses";
+            this.txtExcuses.Size = new System.Drawing.Size(104, 35);
+            this.txtExcuses.StateCommon.Border.Color1 = System.Drawing.Color.SpringGreen;
+            this.txtExcuses.StateCommon.Border.Color2 = System.Drawing.Color.SpringGreen;
+            this.txtExcuses.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox2.StateCommon.Border.Rounding = 20;
-            this.kryptonTextBox2.StateCommon.Border.Width = 1;
-            this.kryptonTextBox2.TabIndex = 96;
-            this.kryptonTextBox2.Text = "Excuses";
+            this.txtExcuses.StateCommon.Border.Rounding = 20;
+            this.txtExcuses.StateCommon.Border.Width = 1;
+            this.txtExcuses.TabIndex = 96;
+            this.txtExcuses.Text = "Excuses";
             // 
             // label23
             // 
@@ -842,25 +842,25 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1606, 840);
-            this.Controls.Add(this.kryptonTextBox2);
+            this.Controls.Add(this.txtExcuses);
             this.Controls.Add(this.label23);
-            this.Controls.Add(this.kryptonComboBox1);
+            this.Controls.Add(this.cbAttend);
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.kryptonTextBox1);
+            this.Controls.Add(this.txtAbsence);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.cbBonousID);
+            this.Controls.Add(this.cbBonous);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.picSearch);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnCompute);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.txtLoan);
+            this.Controls.Add(this.txtpresence);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.cbEmpID);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.txtAdvance);
+            this.Controls.Add(this.txtOT);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.txtlogout);
             this.Controls.Add(this.logoutPIC);
@@ -901,8 +901,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.closePIC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbEmpID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbBonousID)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbBonous)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbAttend)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -945,25 +945,25 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox closePIC;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtAdvance;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtOT;
         private System.Windows.Forms.Label label19;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox cbEmpID;
         private System.Windows.Forms.Label label20;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtLoan;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtpresence;
         private System.Windows.Forms.Label label21;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnUpdate;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnCompute;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnDelete;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnSave;
         private System.Windows.Forms.PictureBox picSearch;
         private System.Windows.Forms.Label label10;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtSearch;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox cbBonousID;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox cbBonous;
         private System.Windows.Forms.Label label11;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtAbsence;
         private System.Windows.Forms.Label label12;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox cbAttend;
         private System.Windows.Forms.Label label22;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtExcuses;
         private System.Windows.Forms.Label label23;
     }
 }
