@@ -80,8 +80,8 @@ namespace Grifindo_Payroll_System.adminPages
                 Connection.Open();
                 int selectedEmpID = int.Parse(cbEmpID.SelectedValue.ToString()); // Convert to integer
                 SqlCommand cmd = new SqlCommand("Select * from AttendenceTbl Where empID = @empID", Connection);
-                cmd.Parameters.AddWithValue("@empID", selectedEmpID); // Use parameter for safe value assignment
-                                                                      // Rest of the code...
+                cmd.Parameters.AddWithValue("@empID", selectedEmpID); // Use parameter for safe value assignment and Rest of the code...
+
             }
             else
             {
@@ -131,6 +131,35 @@ namespace Grifindo_Payroll_System.adminPages
                 }
             }
             Connection.Close();
+        }
+
+        // Get Over Time Rate Details Using when Select Employe ID
+        private void getOverTimeDetail()
+        {
+            if (cbEmpID.SelectedIndex > -1)
+            {
+                Connection.Open();
+                int selectedEmpID = int.Parse(cbEmpID.SelectedValue.ToString()); // Convert to integer
+                SqlCommand cmd = new SqlCommand("Select * from AdvanceTbl Where empID = @empID", Connection);
+                cmd.Parameters.AddWithValue("@empID", selectedEmpID); // Use parameter for safe value assignment
+                DataTable dataTable = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dataTable);
+
+                if (dataTable.Rows.Count > 0)
+                {
+                    DataRow dataRow = dataTable.Rows[0];
+                    // Assuming the overtime field is named "OverTime" in AdvanceTbl
+                    double overtime = double.Parse(dataRow["OverTime"].ToString());
+                    txtOT.Text = overtime.ToString(); // Set overtime value in textbox
+                    OTratrTb.Text = dataRow["OTrate"].ToString();
+                }
+                else
+                {
+                    txtOT.Text = "0"; // Set overtime to 0 if no data found
+                }
+                Connection.Close();
+            }
         }
 
         // Get Bonous Amount
@@ -189,6 +218,7 @@ namespace Grifindo_Payroll_System.adminPages
         private void cbEmpID_SelectionChangeCommitted(object sender, EventArgs e)
         {
             getEmployeedetails();
+            getOverTimeDetail();
             getAttendence();
         }
 
@@ -201,6 +231,28 @@ namespace Grifindo_Payroll_System.adminPages
         private void cbAttend_SelectionChangeCommitted(object sender, EventArgs e)
         {
             getAttedenceData();   
+        }
+
+        // Salary Calculation 
+        private void btnCalculate_Click(object sender, EventArgs e)
+        {
+            // Get all the required values from UI elements (textboxes)
+            double basicSalary = double.Parse(txtBSalary.Text);
+            double overtimeHours = double.Parse(txtOT.Text);
+            double overtimeRate = double.Parse(OTratrTb.Text);
+            double bonusAmount = double.Parse(txtBonous.Text); // Assuming bonus textbox is populated
+
+            // Calculate Gross Salary
+            double grossSalary = basicSalary + (overtimeHours * overtimeRate);
+
+            // Calculate Deductions (if applicable)
+            double deductions = 0; // Assuming no deductions for now
+
+            // Calculate Net Salary
+            double netSalary = grossSalary - deductions + bonusAmount;
+
+            // Display the calculated Net Salary in a textbox (e.g., TSalaryTb)
+            TSalaryTb.Text = netSalary.ToString();
         }
     }
 }
