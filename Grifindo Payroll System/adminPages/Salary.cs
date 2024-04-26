@@ -236,23 +236,28 @@ namespace Grifindo_Payroll_System.adminPages
         // Salary Calculation 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-            // Get all the required values from UI elements (textboxes)
-            double basicSalary = double.Parse(txtBSalary.Text);
-            double overtimeHours = double.Parse(txtOT.Text);
-            double overtimeRate = double.Parse(OTratrTb.Text);
-            double bonusAmount = double.Parse(txtBonous.Text); // Assuming bonus textbox is populated
+            try
+            {
+                // Get all the required values from UI elements (textboxes)
 
-            // Calculate Gross Salary
-            double grossSalary = basicSalary + (overtimeHours * overtimeRate);
+                double basicSalary = double.Parse(txtBSalary.Text);
+                double overtimeHours = double.Parse(txtOT.Text);
+                double overtimeRate = double.Parse(OTratrTb.Text);
+                double bonusAmount = double.Parse(txtBonous.Text);
 
-            // Calculate Deductions (if applicable)
-            double deductions = 0; // Assuming no deductions for now
+                // Calculate Gross Salary
+                double grossSalary = basicSalary + (overtimeHours * overtimeRate);
+                // Calculate Net Salary
+                double deductions = 0;
+                // Display the calculated Net Salary in a textbox
+                double netSalary = grossSalary - deductions + bonusAmount;
 
-            // Calculate Net Salary
-            double netSalary = grossSalary - deductions + bonusAmount;
-
-            // Display the calculated Net Salary in a textbox (e.g., TSalaryTb)
-            TSalaryTb.Text = netSalary.ToString();
+                TSalaryTb.Text = netSalary.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
     }
 }
