@@ -161,11 +161,11 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(15, 439);
+            this.label7.Location = new System.Drawing.Point(22, 439);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(50, 19);
+            this.label7.Size = new System.Drawing.Size(35, 19);
             this.label7.TabIndex = 16;
-            this.label7.Text = "Bonous";
+            this.label7.Text = "Toys";
             // 
             // label6
             // 
@@ -239,7 +239,7 @@
             // 
             // bonousPIC
             // 
-            this.bonousPIC.Image = global::Grifindo_Payroll_System.Properties.Resources.salary;
+            this.bonousPIC.Image = global::Grifindo_Payroll_System.Properties.Resources.box;
             this.bonousPIC.Location = new System.Drawing.Point(22, 403);
             this.bonousPIC.Name = "bonousPIC";
             this.bonousPIC.Size = new System.Drawing.Size(34, 33);
@@ -916,7 +916,6 @@
             this.Palette = this.CommonPal;
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Salary";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.advancedPIC)).EndInit();

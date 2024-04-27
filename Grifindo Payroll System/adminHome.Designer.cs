@@ -31,15 +31,22 @@
             this.components = new System.ComponentModel.Container();
             this.CommonPal = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtlogout = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.advancedPIC = new System.Windows.Forms.PictureBox();
+            this.empPIC = new System.Windows.Forms.PictureBox();
+            this.salaryPIC = new System.Windows.Forms.PictureBox();
+            this.bonousPIC = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.homePIC = new System.Windows.Forms.PictureBox();
+            this.txtlogout = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -47,45 +54,28 @@
             this.mngNUM = new System.Windows.Forms.Label();
             this.toyNUM = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label21 = new System.Windows.Forms.Label();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.salaryNo = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.label22 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.mngrPIC = new System.Windows.Forms.PictureBox();
             this.mgmtoyPIC = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.logoutPIC = new System.Windows.Forms.PictureBox();
-            this.advancedPIC = new System.Windows.Forms.PictureBox();
-            this.empPIC = new System.Windows.Forms.PictureBox();
-            this.salaryPIC = new System.Windows.Forms.PictureBox();
-            this.bonousPIC = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.homePIC = new System.Windows.Forms.PictureBox();
             this.closePIC = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mngrPIC)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mgmtoyPIC)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logoutPIC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.advancedPIC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empPIC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salaryPIC)).BeginInit();
@@ -93,8 +83,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.homePIC)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.closePIC)).BeginInit();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mngrPIC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mgmtoyPIC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoutPIC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closePIC)).BeginInit();
             this.SuspendLayout();
             // 
             // CommonPal
@@ -133,75 +133,13 @@
             this.panel1.Size = new System.Drawing.Size(76, 851);
             this.panel1.TabIndex = 1;
             // 
-            // txtlogout
+            // panel2
             // 
-            this.txtlogout.AutoSize = true;
-            this.txtlogout.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtlogout.Location = new System.Drawing.Point(1539, 801);
-            this.txtlogout.Name = "txtlogout";
-            this.txtlogout.Size = new System.Drawing.Size(51, 19);
-            this.txtlogout.TabIndex = 5;
-            this.txtlogout.Text = "Log Out";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 809);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 19);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Admin";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(18, 54);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 19);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Home";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 279);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 19);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Employee";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(15, 357);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 19);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Attend";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(5, 597);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 19);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Advanced";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(15, 439);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(50, 19);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Bonous";
+            this.panel2.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.panel2.Location = new System.Drawing.Point(17, 71);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(44, 5);
+            this.panel2.TabIndex = 6;
             // 
             // label8
             // 
@@ -213,13 +151,145 @@
             this.label8.TabIndex = 17;
             this.label8.Text = "Salary";
             // 
-            // panel2
+            // label7
             // 
-            this.panel2.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.panel2.Location = new System.Drawing.Point(17, 71);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(44, 5);
-            this.panel2.TabIndex = 6;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(22, 439);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 19);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Toys";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(5, 597);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(66, 19);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Advanced";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(15, 357);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 19);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Attend";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(6, 279);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 19);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Employee";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(18, 54);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 19);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Home";
+            // 
+            // advancedPIC
+            // 
+            this.advancedPIC.Image = global::Grifindo_Payroll_System.Properties.Resources.settings;
+            this.advancedPIC.Location = new System.Drawing.Point(21, 561);
+            this.advancedPIC.Name = "advancedPIC";
+            this.advancedPIC.Size = new System.Drawing.Size(34, 33);
+            this.advancedPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.advancedPIC.TabIndex = 11;
+            this.advancedPIC.TabStop = false;
+            // 
+            // empPIC
+            // 
+            this.empPIC.Image = global::Grifindo_Payroll_System.Properties.Resources.corporate;
+            this.empPIC.Location = new System.Drawing.Point(20, 243);
+            this.empPIC.Name = "empPIC";
+            this.empPIC.Size = new System.Drawing.Size(34, 33);
+            this.empPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.empPIC.TabIndex = 10;
+            this.empPIC.TabStop = false;
+            // 
+            // salaryPIC
+            // 
+            this.salaryPIC.Image = global::Grifindo_Payroll_System.Properties.Resources.save_money;
+            this.salaryPIC.Location = new System.Drawing.Point(22, 481);
+            this.salaryPIC.Name = "salaryPIC";
+            this.salaryPIC.Size = new System.Drawing.Size(34, 33);
+            this.salaryPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.salaryPIC.TabIndex = 9;
+            this.salaryPIC.TabStop = false;
+            // 
+            // bonousPIC
+            // 
+            this.bonousPIC.Image = global::Grifindo_Payroll_System.Properties.Resources.box;
+            this.bonousPIC.Location = new System.Drawing.Point(22, 403);
+            this.bonousPIC.Name = "bonousPIC";
+            this.bonousPIC.Size = new System.Drawing.Size(34, 33);
+            this.bonousPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bonousPIC.TabIndex = 8;
+            this.bonousPIC.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::Grifindo_Payroll_System.Properties.Resources.attendance;
+            this.pictureBox5.Location = new System.Drawing.Point(21, 321);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(34, 33);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 7;
+            this.pictureBox5.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(16, 809);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 19);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Admin";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Grifindo_Payroll_System.Properties.Resources.people;
+            this.pictureBox3.Location = new System.Drawing.Point(21, 775);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(34, 33);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            // 
+            // homePIC
+            // 
+            this.homePIC.Image = global::Grifindo_Payroll_System.Properties.Resources.home;
+            this.homePIC.Location = new System.Drawing.Point(22, 21);
+            this.homePIC.Name = "homePIC";
+            this.homePIC.Size = new System.Drawing.Size(34, 33);
+            this.homePIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.homePIC.TabIndex = 2;
+            this.homePIC.TabStop = false;
+            // 
+            // txtlogout
+            // 
+            this.txtlogout.AutoSize = true;
+            this.txtlogout.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtlogout.Location = new System.Drawing.Point(1539, 801);
+            this.txtlogout.Name = "txtlogout";
+            this.txtlogout.Size = new System.Drawing.Size(51, 19);
+            this.txtlogout.TabIndex = 5;
+            this.txtlogout.Text = "Log Out";
             // 
             // label9
             // 
@@ -298,6 +368,16 @@
             this.panel3.Size = new System.Drawing.Size(231, 544);
             this.panel3.TabIndex = 18;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Grifindo_Payroll_System.Properties.Resources.resume;
+            this.pictureBox1.Location = new System.Drawing.Point(83, 38);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(57, 57);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 29;
+            this.pictureBox1.TabStop = false;
+            // 
             // label21
             // 
             this.label21.AutoSize = true;
@@ -307,6 +387,16 @@
             this.label21.Size = new System.Drawing.Size(46, 19);
             this.label21.TabIndex = 6;
             this.label21.Text = "Admin";
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.Image = global::Grifindo_Payroll_System.Properties.Resources.home;
+            this.pictureBox15.Location = new System.Drawing.Point(21, 775);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(34, 33);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox15.TabIndex = 3;
+            this.pictureBox15.TabStop = false;
             // 
             // label15
             // 
@@ -330,6 +420,26 @@
             this.panel4.Size = new System.Drawing.Size(393, 180);
             this.panel4.TabIndex = 24;
             // 
+            // salaryNo
+            // 
+            this.salaryNo.AutoSize = true;
+            this.salaryNo.Font = new System.Drawing.Font("Poppins SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salaryNo.Location = new System.Drawing.Point(319, 131);
+            this.salaryNo.Name = "salaryNo";
+            this.salaryNo.Size = new System.Drawing.Size(49, 28);
+            this.salaryNo.TabIndex = 24;
+            this.salaryNo.Text = "NUM";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Poppins SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(24, 27);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(224, 42);
+            this.label18.TabIndex = 24;
+            this.label18.Text = "Total Salary Paid";
+            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -339,6 +449,16 @@
             this.label16.Size = new System.Drawing.Size(46, 19);
             this.label16.TabIndex = 6;
             this.label16.Text = "Admin";
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = global::Grifindo_Payroll_System.Properties.Resources.home;
+            this.pictureBox11.Location = new System.Drawing.Point(21, 775);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(34, 33);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox11.TabIndex = 3;
+            this.pictureBox11.TabStop = false;
             // 
             // panel5
             // 
@@ -352,25 +472,15 @@
             this.panel5.Size = new System.Drawing.Size(393, 180);
             this.panel5.TabIndex = 25;
             // 
-            // label17
+            // label22
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(16, 809);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(46, 19);
-            this.label17.TabIndex = 6;
-            this.label17.Text = "Admin";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Poppins SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(24, 27);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(224, 42);
-            this.label18.TabIndex = 24;
-            this.label18.Text = "Total Salary Paid";
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Poppins SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(319, 132);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(49, 28);
+            this.label22.TabIndex = 25;
+            this.label22.Text = "NUM";
             // 
             // label19
             // 
@@ -382,25 +492,25 @@
             this.label19.TabIndex = 25;
             this.label19.Text = "Total Salary Paid";
             // 
-            // salaryNo
+            // label17
             // 
-            this.salaryNo.AutoSize = true;
-            this.salaryNo.Font = new System.Drawing.Font("Poppins SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salaryNo.Location = new System.Drawing.Point(319, 131);
-            this.salaryNo.Name = "salaryNo";
-            this.salaryNo.Size = new System.Drawing.Size(49, 28);
-            this.salaryNo.TabIndex = 24;
-            this.salaryNo.Text = "NUM";
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(16, 809);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(46, 19);
+            this.label17.TabIndex = 6;
+            this.label17.Text = "Admin";
             // 
-            // label22
+            // pictureBox12
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Poppins SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(319, 132);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(49, 28);
-            this.label22.TabIndex = 25;
-            this.label22.Text = "NUM";
+            this.pictureBox12.Image = global::Grifindo_Payroll_System.Properties.Resources.home;
+            this.pictureBox12.Location = new System.Drawing.Point(21, 775);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(34, 33);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox12.TabIndex = 3;
+            this.pictureBox12.TabStop = false;
             // 
             // label1
             // 
@@ -408,9 +518,9 @@
             this.label1.Font = new System.Drawing.Font("Poppins SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(469, 758);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 28);
+            this.label1.Size = new System.Drawing.Size(73, 28);
             this.label1.TabIndex = 24;
-            this.label1.Text = "Manage Toys";
+            this.label1.Text = "Bonous";
             // 
             // label12
             // 
@@ -434,33 +544,13 @@
             // 
             // mgmtoyPIC
             // 
-            this.mgmtoyPIC.Image = global::Grifindo_Payroll_System.Properties.Resources.box;
+            this.mgmtoyPIC.Image = global::Grifindo_Payroll_System.Properties.Resources.salary;
             this.mgmtoyPIC.Location = new System.Drawing.Point(497, 698);
             this.mgmtoyPIC.Name = "mgmtoyPIC";
             this.mgmtoyPIC.Size = new System.Drawing.Size(57, 57);
             this.mgmtoyPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.mgmtoyPIC.TabIndex = 26;
             this.mgmtoyPIC.TabStop = false;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Image = global::Grifindo_Payroll_System.Properties.Resources.home;
-            this.pictureBox12.Location = new System.Drawing.Point(21, 775);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(34, 33);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox12.TabIndex = 3;
-            this.pictureBox12.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Image = global::Grifindo_Payroll_System.Properties.Resources.home;
-            this.pictureBox11.Location = new System.Drawing.Point(21, 775);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(34, 33);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox11.TabIndex = 3;
-            this.pictureBox11.TabStop = false;
             // 
             // pictureBox10
             // 
@@ -472,16 +562,6 @@
             this.pictureBox10.TabIndex = 25;
             this.pictureBox10.TabStop = false;
             // 
-            // pictureBox15
-            // 
-            this.pictureBox15.Image = global::Grifindo_Payroll_System.Properties.Resources.home;
-            this.pictureBox15.Location = new System.Drawing.Point(21, 775);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(34, 33);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox15.TabIndex = 3;
-            this.pictureBox15.TabStop = false;
-            // 
             // logoutPIC
             // 
             this.logoutPIC.Image = global::Grifindo_Payroll_System.Properties.Resources.logout;
@@ -491,76 +571,6 @@
             this.logoutPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logoutPIC.TabIndex = 4;
             this.logoutPIC.TabStop = false;
-            // 
-            // advancedPIC
-            // 
-            this.advancedPIC.Image = global::Grifindo_Payroll_System.Properties.Resources.settings;
-            this.advancedPIC.Location = new System.Drawing.Point(21, 561);
-            this.advancedPIC.Name = "advancedPIC";
-            this.advancedPIC.Size = new System.Drawing.Size(34, 33);
-            this.advancedPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.advancedPIC.TabIndex = 11;
-            this.advancedPIC.TabStop = false;
-            // 
-            // empPIC
-            // 
-            this.empPIC.Image = global::Grifindo_Payroll_System.Properties.Resources.corporate;
-            this.empPIC.Location = new System.Drawing.Point(20, 243);
-            this.empPIC.Name = "empPIC";
-            this.empPIC.Size = new System.Drawing.Size(34, 33);
-            this.empPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.empPIC.TabIndex = 10;
-            this.empPIC.TabStop = false;
-            // 
-            // salaryPIC
-            // 
-            this.salaryPIC.Image = global::Grifindo_Payroll_System.Properties.Resources.save_money;
-            this.salaryPIC.Location = new System.Drawing.Point(22, 481);
-            this.salaryPIC.Name = "salaryPIC";
-            this.salaryPIC.Size = new System.Drawing.Size(34, 33);
-            this.salaryPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.salaryPIC.TabIndex = 9;
-            this.salaryPIC.TabStop = false;
-            // 
-            // bonousPIC
-            // 
-            this.bonousPIC.Image = global::Grifindo_Payroll_System.Properties.Resources.salary;
-            this.bonousPIC.Location = new System.Drawing.Point(22, 403);
-            this.bonousPIC.Name = "bonousPIC";
-            this.bonousPIC.Size = new System.Drawing.Size(34, 33);
-            this.bonousPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bonousPIC.TabIndex = 8;
-            this.bonousPIC.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::Grifindo_Payroll_System.Properties.Resources.attendance;
-            this.pictureBox5.Location = new System.Drawing.Point(21, 321);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(34, 33);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 7;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Grifindo_Payroll_System.Properties.Resources.people;
-            this.pictureBox3.Location = new System.Drawing.Point(21, 775);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(34, 33);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
-            // 
-            // homePIC
-            // 
-            this.homePIC.Image = global::Grifindo_Payroll_System.Properties.Resources.home;
-            this.homePIC.Location = new System.Drawing.Point(22, 21);
-            this.homePIC.Name = "homePIC";
-            this.homePIC.Size = new System.Drawing.Size(34, 33);
-            this.homePIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.homePIC.TabIndex = 2;
-            this.homePIC.TabStop = false;
             // 
             // closePIC
             // 
@@ -572,17 +582,7 @@
             this.closePIC.TabIndex = 0;
             this.closePIC.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Grifindo_Payroll_System.Properties.Resources.resume;
-            this.pictureBox1.Location = new System.Drawing.Point(83, 38);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(57, 57);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 29;
-            this.pictureBox1.TabStop = false;
-            // 
-            // Home
+            // adminHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -602,26 +602,13 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.closePIC);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Home";
+            this.Name = "adminHome";
             this.Palette = this.CommonPal;
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mngrPIC)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mgmtoyPIC)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logoutPIC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.advancedPIC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empPIC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salaryPIC)).EndInit();
@@ -629,8 +616,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.homePIC)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.closePIC)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mngrPIC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mgmtoyPIC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoutPIC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closePIC)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

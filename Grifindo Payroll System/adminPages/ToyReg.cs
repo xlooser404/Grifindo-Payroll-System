@@ -11,9 +11,9 @@ using ComponentFactory.Krypton.Toolkit;
 
 namespace Grifindo_Payroll_System.adminPages
 {
-    public partial class Toys : KryptonForm
+    public partial class ToyReg : KryptonForm
     {
-        public Toys()
+        public ToyReg()
         {
             InitializeComponent();
         }
