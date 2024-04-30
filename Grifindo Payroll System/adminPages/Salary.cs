@@ -264,6 +264,12 @@ namespace Grifindo_Payroll_System.adminPages
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-        } 
+        }
+
+        // Data Add Button Click Event 
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
