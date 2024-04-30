@@ -46,13 +46,13 @@
             this.btnSave = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnEdit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnDelete = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.SalaryDGV = new System.Windows.Forms.DataGridView();
+            this.BonousDGV = new System.Windows.Forms.DataGridView();
             this.picSearch = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtSearch = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.homePIC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closePIC)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SalaryDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BonousDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,7 +93,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Poppins SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(55, 76);
+            this.label1.Location = new System.Drawing.Point(67, 96);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(197, 34);
             this.label1.TabIndex = 52;
@@ -121,7 +121,6 @@
             // 
             // txtName
             // 
-            this.txtName.Enabled = false;
             this.txtName.Location = new System.Drawing.Point(44, 167);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(246, 35);
@@ -147,7 +146,6 @@
             // 
             // txtCode
             // 
-            this.txtCode.Enabled = false;
             this.txtCode.Location = new System.Drawing.Point(44, 238);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(246, 35);
@@ -173,7 +171,6 @@
             // 
             // txtDetails
             // 
-            this.txtDetails.Enabled = false;
             this.txtDetails.Location = new System.Drawing.Point(44, 304);
             this.txtDetails.Name = "txtDetails";
             this.txtDetails.Size = new System.Drawing.Size(246, 35);
@@ -199,7 +196,6 @@
             // 
             // txtAmount
             // 
-            this.txtAmount.Enabled = false;
             this.txtAmount.Location = new System.Drawing.Point(44, 369);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(246, 35);
@@ -257,6 +253,7 @@
             this.btnSave.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btnSave.TabIndex = 84;
             this.btnSave.Values.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnEdit
             // 
@@ -292,6 +289,7 @@
             this.btnEdit.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btnEdit.TabIndex = 85;
             this.btnEdit.Values.Text = "Edit";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
@@ -327,15 +325,17 @@
             this.btnDelete.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btnDelete.TabIndex = 86;
             this.btnDelete.Values.Text = "Delete";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // SalaryDGV
+            // BonousDGV
             // 
-            this.SalaryDGV.BackgroundColor = System.Drawing.Color.White;
-            this.SalaryDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.SalaryDGV.Location = new System.Drawing.Point(323, 136);
-            this.SalaryDGV.Name = "SalaryDGV";
-            this.SalaryDGV.Size = new System.Drawing.Size(765, 417);
-            this.SalaryDGV.TabIndex = 87;
+            this.BonousDGV.BackgroundColor = System.Drawing.Color.White;
+            this.BonousDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.BonousDGV.Location = new System.Drawing.Point(323, 136);
+            this.BonousDGV.Name = "BonousDGV";
+            this.BonousDGV.Size = new System.Drawing.Size(765, 417);
+            this.BonousDGV.TabIndex = 87;
+            this.BonousDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BonousDGV_CellClick);
             // 
             // picSearch
             // 
@@ -382,7 +382,7 @@
             this.Controls.Add(this.picSearch);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.SalaryDGV);
+            this.Controls.Add(this.BonousDGV);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnSave);
@@ -407,7 +407,7 @@
             this.Text = "Toys";
             ((System.ComponentModel.ISupportInitialize)(this.homePIC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.closePIC)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SalaryDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BonousDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -433,7 +433,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnSave;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnEdit;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnDelete;
-        private System.Windows.Forms.DataGridView SalaryDGV;
+        private System.Windows.Forms.DataGridView BonousDGV;
         private System.Windows.Forms.PictureBox picSearch;
         private System.Windows.Forms.Label label10;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtSearch;

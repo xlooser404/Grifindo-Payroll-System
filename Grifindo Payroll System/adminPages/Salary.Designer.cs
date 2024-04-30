@@ -76,7 +76,7 @@
             this.picSearch = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtSearch = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.cbBonous = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.cbBonousName = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtAbsence = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -99,7 +99,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.closePIC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbEmpID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbBonous)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbBonousName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbAttend)).BeginInit();
             this.SuspendLayout();
             // 
@@ -728,27 +728,27 @@
             this.txtSearch.TabIndex = 86;
             this.txtSearch.Text = "type Nic";
             // 
-            // cbBonous
+            // cbBonousName
             // 
-            this.cbBonous.DropDownWidth = 234;
-            this.cbBonous.Items.AddRange(new object[] {
+            this.cbBonousName.DropDownWidth = 234;
+            this.cbBonousName.Items.AddRange(new object[] {
             ""});
-            this.cbBonous.Location = new System.Drawing.Point(1119, 151);
-            this.cbBonous.Name = "cbBonous";
-            this.cbBonous.Size = new System.Drawing.Size(139, 34);
-            this.cbBonous.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.SpringGreen;
-            this.cbBonous.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.SpringGreen;
-            this.cbBonous.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.cbBonousName.Location = new System.Drawing.Point(1119, 151);
+            this.cbBonousName.Name = "cbBonousName";
+            this.cbBonousName.Size = new System.Drawing.Size(139, 34);
+            this.cbBonousName.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.SpringGreen;
+            this.cbBonousName.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.SpringGreen;
+            this.cbBonousName.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.cbBonous.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.cbBonous.StateCommon.ComboBox.Border.Rounding = 20;
-            this.cbBonous.StateCommon.ComboBox.Border.Width = 1;
-            this.cbBonous.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbBonous.StateCommon.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.cbBonous.TabIndex = 90;
-            this.cbBonous.Text = "Bonous Name";
-            this.cbBonous.SelectionChangeCommitted += new System.EventHandler(this.cbBonous_SelectionChangeCommitted);
+            this.cbBonousName.StateCommon.ComboBox.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.cbBonousName.StateCommon.ComboBox.Border.Rounding = 20;
+            this.cbBonousName.StateCommon.ComboBox.Border.Width = 1;
+            this.cbBonousName.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbBonousName.StateCommon.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.cbBonousName.TabIndex = 90;
+            this.cbBonousName.Text = "Bonous Name";
+            this.cbBonousName.SelectionChangeCommitted += new System.EventHandler(this.cbBonous_SelectionChangeCommitted);
             // 
             // label11
             // 
@@ -879,7 +879,7 @@
             this.Controls.Add(this.label22);
             this.Controls.Add(this.txtAbsence);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.cbBonous);
+            this.Controls.Add(this.cbBonousName);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.picSearch);
             this.Controls.Add(this.label10);
@@ -931,7 +931,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.closePIC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbEmpID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbBonous)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbBonousName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbAttend)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -987,7 +987,7 @@
         private System.Windows.Forms.PictureBox picSearch;
         private System.Windows.Forms.Label label10;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtSearch;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox cbBonous;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox cbBonousName;
         private System.Windows.Forms.Label label11;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtAbsence;
         private System.Windows.Forms.Label label12;

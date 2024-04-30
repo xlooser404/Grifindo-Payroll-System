@@ -96,16 +96,16 @@ namespace Grifindo_Payroll_System.adminPages
         // Get Bonous to Salary issue form
         private void getBonous()
         {
-            if (cbBonous.SelectedIndex > -1) // Check if an item is selected
-            {
-                Connection.Open();
-                SqlCommand cmd = new SqlCommand("Select * from BonousTbl where bonousName" + cbBonous.SelectedValue.ToString() + "", Connection);
-                // Rest of the code...
-            }
-            else
-            {
-                // Handle no selection case (optional: display message)
-            }
+            Connection.Open();
+            SqlCommand cmd = new SqlCommand("Select bonousName from BonousTbl", Connection); // Retrieve only bonous names
+
+            DataTable dataTable = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(dataTable);
+
+            cbBonousName.ValueMember = "bonousName"; // Set bonousName as the value member
+            cbBonousName.DataSource = dataTable;
+
             Connection.Close();
         }
 
@@ -171,26 +171,28 @@ namespace Grifindo_Payroll_System.adminPages
         // Get Bonous Amount
         private void getBonousAmt()
         {
-            if (cbEmpID.SelectedIndex > -1) // Check if an item is selected
+            if (cbEmpID.SelectedIndex > -1) // Check if an employee is selected
             {
                 Connection.Open();
-                int selectedBName = int.Parse(cbBonous.SelectedValue.ToString()); // Convert to integer
+                string selectedBName = cbBonousName.SelectedValue.ToString(); // Get the selected bonus name as string
                 SqlCommand cmd = new SqlCommand("Select * from BonousTbl where bonousName = @BName", Connection);
-                cmd.Parameters.AddWithValue("@BName", selectedBName); // Use parameter for safe value assignment
+                cmd.Parameters.AddWithValue("@BName", selectedBName);  // Use parameter for safe value assignment
+
                 DataTable dataTable = new DataTable();
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 adapter.Fill(dataTable);
-                if (dataTable.Rows.Count > 0) // Check if data exists for selected ID
+
+                if (dataTable.Rows.Count > 0) // Check if data exists for selected name
                 {
                     DataRow dataRow = dataTable.Rows[0];
                     txtBonous.Text = dataRow["bounousAmount"].ToString();
                 }
                 else
                 {
-                    // Handle case where no employee found (optional: display message)
+                    txtBonous.Text = "0"; // Set bonus amount to 0 if not found
                 }
+                Connection.Close();
             }
-            Connection.Close();
         }
 
         // Get Bonous Amount
