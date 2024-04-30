@@ -371,7 +371,7 @@
             // 
             // TSalaryTb
             // 
-            this.TSalaryTb.Location = new System.Drawing.Point(358, 220);
+            this.TSalaryTb.Location = new System.Drawing.Point(364, 220);
             this.TSalaryTb.Name = "TSalaryTb";
             this.TSalaryTb.Size = new System.Drawing.Size(177, 35);
             this.TSalaryTb.StateCommon.Border.Color1 = System.Drawing.Color.SpringGreen;
@@ -388,7 +388,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(354, 197);
+            this.label16.Location = new System.Drawing.Point(360, 197);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(79, 22);
             this.label16.TabIndex = 65;
@@ -449,7 +449,7 @@
             // txtName
             // 
             this.txtName.Enabled = false;
-            this.txtName.Location = new System.Drawing.Point(330, 151);
+            this.txtName.Location = new System.Drawing.Point(325, 150);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(246, 35);
             this.txtName.StateCommon.Border.Color1 = System.Drawing.Color.SpringGreen;
@@ -466,7 +466,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(326, 128);
+            this.label9.Location = new System.Drawing.Point(321, 127);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(106, 22);
             this.label9.TabIndex = 53;
@@ -495,7 +495,7 @@
             // closePIC
             // 
             this.closePIC.Image = global::Grifindo_Payroll_System.Properties.Resources.close;
-            this.closePIC.Location = new System.Drawing.Point(1555, 12);
+            this.closePIC.Location = new System.Drawing.Point(1555, 6);
             this.closePIC.Name = "closePIC";
             this.closePIC.Size = new System.Drawing.Size(44, 44);
             this.closePIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

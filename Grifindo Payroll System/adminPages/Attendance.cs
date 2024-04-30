@@ -83,18 +83,28 @@ namespace Grifindo_Payroll_System.Pages
         // Get Employee Names, contact, Nic using empID
         private void getEmployeedetails()
         {
-            Connection.Open();
-            String Query = "Select * from EmployeeTbl where empID" + cbEmpID.SelectedValue.ToString() + "'";
-            SqlCommand cmd = new SqlCommand(Query, Connection);
-            DataTable dataTable = new DataTable();
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            adapter.Fill(dataTable);
-            foreach(DataRow dataRow in dataTable.Rows)
+            if (cbEmpID.SelectedIndex > -1) // Check if an item is selected
             {
-                txtName.Text = dataRow["empName"].ToString();
-                txtNic.Text = dataRow["empNic"].ToString();
-                txtContact.Text = dataRow["empContact"].ToString();
+                Connection.Open();
+                int selectedEmpID = int.Parse(cbEmpID.SelectedValue.ToString()); // Convert to integer
+                SqlCommand cmd = new SqlCommand("Select * from EmployeeTbl where empID = @empID", Connection);
+                cmd.Parameters.AddWithValue("@empID", selectedEmpID); // Use parameter for safe value assignment
+                DataTable dataTable = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dataTable);
+                if (dataTable.Rows.Count > 0) // Check if data exists for selected ID
+                {
+                    DataRow dataRow = dataTable.Rows[0];
+                    txtName.Text = dataRow["empName"].ToString();
+                    txtNic.Text = dataRow["empNic"].ToString();
+                    txtContact.Text = dataRow["empContact"].ToString();
+                }
+                else
+                {
+                    // Handle case where no employee found (optional: display message)
+                }
             }
+            Connection.Close();
         }
 
         // cbEmpID combo box ID selection 
@@ -225,7 +235,7 @@ namespace Grifindo_Payroll_System.Pages
                 // Retrieve data from the row's cells and assign to textboxes 
                 cbEmpID.Text = selectedRow.Cells["empID"].Value.ToString();
                 txtName.Text = selectedRow.Cells["empName"].Value.ToString();
-                dtperiod.Value = (DateTime)selectedRow.Cells["period"].Value; // Cast to DateTime
+                dtperiod.Text = selectedRow.Cells["period"].Value.ToString(); // Cast to DateTime
                 txtPresent.Text = selectedRow.Cells["dayPresent"].Value.ToString();
                 txtAbsence.Text = selectedRow.Cells["dayAbsence"].Value.ToString();
                 txtExcuses.Text = selectedRow.Cells["dayExcuse"].Value.ToString();

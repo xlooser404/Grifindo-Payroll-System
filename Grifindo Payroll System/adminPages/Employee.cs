@@ -126,6 +126,7 @@ namespace Grifindo_Payroll_System.Pages
             Clear_Data();
         }
 
+        // Data Delete Button Click Event
         private void btnDelete_Click(object sender, EventArgs e)
         {
             try

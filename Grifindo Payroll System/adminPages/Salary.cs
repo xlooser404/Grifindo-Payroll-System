@@ -75,19 +75,22 @@ namespace Grifindo_Payroll_System.adminPages
         // Get Attendence to to Salary issue form
         private void getAttendence()
         {
-            if (cbEmpID.SelectedIndex > -1) // Check if an item is selected
+            if (cbEmpID.SelectedIndex > -1)
             {
                 Connection.Open();
-                int selectedEmpID = int.Parse(cbEmpID.SelectedValue.ToString()); // Convert to integer
-                SqlCommand cmd = new SqlCommand("Select * from AttendenceTbl Where empID = @empID", Connection);
-                cmd.Parameters.AddWithValue("@empID", selectedEmpID); // Use parameter for safe value assignment and Rest of the code...
+                int selectedEmpID = int.Parse(cbEmpID.SelectedValue.ToString());
+                SqlCommand cmd = new SqlCommand("Select AttendID from AttendenceTbl Where empID = @empID", Connection);
+                cmd.Parameters.AddWithValue("@empID", selectedEmpID);
 
+                DataTable dataTable = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dataTable);
+
+                cbAttend.ValueMember = "AttendID"; // Set AttendID as the value member
+                cbAttend.DataSource = dataTable;
+
+                Connection.Close();
             }
-            else
-            {
-                // Handle no selection case (optional: display message)
-            }
-            Connection.Close();
         }
 
         // Get Bonous to Salary issue form
@@ -123,7 +126,7 @@ namespace Grifindo_Payroll_System.adminPages
                     DataRow dataRow = dataTable.Rows[0];
                     txtName.Text = dataRow["empName"].ToString();
                     txtNic.Text = dataRow["empNic"].ToString();
-                    txtBSalary.Text = dataRow["empContact"].ToString();
+                    txtBSalary.Text = dataRow["empBSalary"].ToString();
                 }
                 else
                 {
@@ -140,7 +143,7 @@ namespace Grifindo_Payroll_System.adminPages
             {
                 Connection.Open();
                 int selectedEmpID = int.Parse(cbEmpID.SelectedValue.ToString()); // Convert to integer
-                SqlCommand cmd = new SqlCommand("Select * from AdvanceTbl Where empID = @empID", Connection);
+                SqlCommand cmd = new SqlCommand("Select * from AdvancedTbl Where empID = @empID", Connection);
                 cmd.Parameters.AddWithValue("@empID", selectedEmpID); // Use parameter for safe value assignment
                 DataTable dataTable = new DataTable();
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -152,11 +155,14 @@ namespace Grifindo_Payroll_System.adminPages
                     // Assuming the overtime field is named "OverTime" in AdvanceTbl
                     double overtime = double.Parse(dataRow["OverTime"].ToString());
                     txtOT.Text = overtime.ToString(); // Set overtime value in textbox
-                    OTratrTb.Text = dataRow["OTrate"].ToString();
+                    double OTRate = double.Parse(dataRow["OTrate"].ToString());
+                    OTratrTb.Text = OTRate.ToString();
+
                 }
                 else
                 {
                     txtOT.Text = "0"; // Set overtime to 0 if no data found
+                    OTratrTb.Text = "0"; // Set OTrate to 0 if no data found
                 }
                 Connection.Close();
             }
@@ -204,7 +210,7 @@ namespace Grifindo_Payroll_System.adminPages
                     DataRow dataRow = dataTable.Rows[0];
                     txtAbsence.Text = dataRow["dayAbsence"].ToString();
                     txtExcuses.Text = dataRow["dayExcuse"].ToString();
-                    txtpresence.Text = dataRow["dayPresent"].ToString();
+                    txtpresence.Text = dataRow["dayPresent"].ToString(); 
                 }
                 else
                 {
@@ -258,6 +264,6 @@ namespace Grifindo_Payroll_System.adminPages
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-        }
+        } 
     }
 }
