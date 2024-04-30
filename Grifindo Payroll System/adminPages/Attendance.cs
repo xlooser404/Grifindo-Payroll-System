@@ -61,9 +61,11 @@ namespace Grifindo_Payroll_System.Pages
         private void Clear_Data()
         {
             txtName.Text = "";
+            txtContact.Text = "";
             txtAbsence.Text = "";
             txtPresent.Text = "";
             txtExcuses.Text = "";
+            txtNic.Text = "";
         }
 
         // Get Employee ID to Attendence form
