@@ -30,7 +30,7 @@ namespace Grifindo_Payroll_System.adminPages
         // Display Attendence Details
         private void SalaryList()
         {
-            string query = "SELECT salID, empID, empName, empBSal, empBonous, empAdvanced, empOT, empBalance, salPeriod FROM SalaryTbl";
+            string query = "SELECT salID, empID, empName, empBSal, empBonous, empOT, empOTRate, empNic, empBalance, salPeriod FROM SalaryTbl";
             using (SqlConnection connection = new SqlConnection("Data Source=TUF-GAMING-F15\\SQLEXPRESS;Initial Catalog=GrifindoToys;Integrated Security=True;Encrypt=False"))
             {
                 using (SqlDataAdapter adapter = new SqlDataAdapter(query, connection))
@@ -222,6 +222,21 @@ namespace Grifindo_Payroll_System.adminPages
             Connection.Close();
         }
 
+        // Clear_Data Function 
+        private void Clear_Data()
+        {
+            
+            txtAbsence.Text = "";
+            txtBonous.Text = "";
+            txtBSalary.Text = "";
+            txtExcuses.Text = "";
+            txtlogout.Text = "";
+            txtName.Text = "";
+            txtNic.Text = "";
+            txtOT.Text = "";
+            txtpresence.Text = "";
+        }
+
         // Combo box empID Selection function Calling
         private void cbEmpID_SelectionChangeCommitted(object sender, EventArgs e)
         {
@@ -271,7 +286,135 @@ namespace Grifindo_Payroll_System.adminPages
         // Data Add Button Click Event 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            try
+            {
+                // Validate user input to ensure all fields are filled in
+                if (string.IsNullOrEmpty(txtName.Text) ||
+                    string.IsNullOrEmpty(txtBSalary.Text) ||
+                    string.IsNullOrEmpty(txtBonous.Text) ||
+                    string.IsNullOrEmpty(txtOT.Text) ||
+                    string.IsNullOrEmpty(TSalaryTb.Text) ||
+                    string.IsNullOrEmpty(OTratrTb.Text))
+                {
+                    MessageBox.Show("Please fill in all fields.");
+                    return;
+                }
 
+                // Open database connection
+                Connection.Open();
+                string period = dtperiod.Value.Month + " - " + dtperiod.Value.Year;
+
+                // Create SQL command with parameters
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO SalaryTbl (empID, empName, empBSal, empBonous, empOT, empOTRate, empNic, empBalance, salPeriod) VALUES (@eID, @eName, @eBSal, @eBonous, @eOT, @eOTR, @eNic, @eBalance, @eSPeriod)", Connection))
+                {
+                    // Add parameters with appropriate data types
+                    cmd.Parameters.AddWithValue("@eID", cbEmpID.Text);
+                    cmd.Parameters.AddWithValue("@eName", txtName.Text);
+                    cmd.Parameters.AddWithValue("@eBSal", txtBSalary.Text);
+                    cmd.Parameters.AddWithValue("@eBonous", txtBonous.Text);
+                    cmd.Parameters.AddWithValue("@eOT", txtOT.Text);
+                    cmd.Parameters.AddWithValue("@eOTR", OTratrTb.Text);
+                    cmd.Parameters.AddWithValue("@eSPeriod", period);
+                    cmd.Parameters.AddWithValue("@eNic", txtNic.Text);
+                    cmd.Parameters.AddWithValue("@eBalance", TSalaryTb.Text);
+
+
+                    // Execute the command
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Salary Added!");
+                }
+
+                // Refresh the Attendeance list display
+                SalaryList();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error adding Salary: {ex.Message}");
+                // Consider logging the error for debugging
+            }
+            finally
+            {
+                // Close database connection even in case of errors
+                Connection.Close();
+            }
+
+            // Clear form fields for the next entry
+            Clear_Data();
+        }
+
+        // Data Grid View Cell Click event 
+        private void SalaryDGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                // Access the selected row
+                DataGridViewRow selectedRow = SalaryDGV.Rows[e.RowIndex];
+
+                // Retrieve data from the row's cells and assign to textboxes 
+                cbEmpID.Text = selectedRow.Cells["empID"].Value.ToString();
+                txtName.Text = selectedRow.Cells["empName"].Value.ToString();
+                dtperiod.Text = selectedRow.Cells["salPeriod"].Value.ToString(); // Cast to DateTime  
+                txtBSalary.Text = selectedRow.Cells["empBSal"].Value.ToString();
+                txtBonous.Text = selectedRow.Cells["empBonous"].Value.ToString();
+                txtOT.Text = selectedRow.Cells["empOT"].Value.ToString();
+                txtNic.Text = selectedRow.Cells["empNic"].Value.ToString();
+                OTratrTb.Text = selectedRow.Cells["empOTRate"].Value.ToString();
+                TSalaryTb.Text = selectedRow.Cells["empBalance"].Value.ToString();
+            }
+        }
+
+        // Data Delete Button click Event
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Ensure a row is selected
+                if (SalaryDGV.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("Please select a Salary to delete.");
+                    return;
+                }
+
+                // Confirm deletion with the user
+                DialogResult result = MessageBox.Show("Are you sure you want to delete this Salary?", "Confirm Deletion", MessageBoxButtons.YesNo);
+                if (result == DialogResult.No)
+                {
+                    return;
+                }
+
+                // Get the employee NIC of the selected row
+                string eNic = SalaryDGV.SelectedRows[0].Cells["empNic"].Value.ToString();
+
+                // Open database connection
+                Connection.Open();
+
+                // Create SQL command with parameter, specify the table name to delete from
+                using (SqlCommand cmd = new SqlCommand("DELETE FROM SalaryTbl WHERE empNic = @eNic", Connection))
+                {
+                    // Add parameter with appropriate data type
+                    cmd.Parameters.Add("@eNic", SqlDbType.VarChar).Value = eNic;
+
+                    // Execute the command
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Salary deleted successfully!");
+                }
+
+                // Refresh the Salary list display
+                SalaryList();
+
+                // Clear Data in Text boxes
+                Clear_Data();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error deleting Salary: {ex.Message}");
+                // Consider logging the error for debugging
+            }
+            finally
+            {
+                // Close database connection even in case of errors
+                Connection.Close();
+            }
         }
     }
 }

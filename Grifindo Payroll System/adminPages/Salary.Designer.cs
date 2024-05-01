@@ -50,7 +50,7 @@
             this.logoutPIC = new System.Windows.Forms.PictureBox();
             this.SalaryDGV = new System.Windows.Forms.DataGridView();
             this.label18 = new System.Windows.Forms.Label();
-            this.dtPeriod = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.dtperiod = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.txtBonous = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.TSalaryTb = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -71,7 +71,7 @@
             this.txtpresence = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.btnCalculate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.btnEdit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnDelete = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnSave = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.picSearch = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -315,6 +315,7 @@
             this.SalaryDGV.Name = "SalaryDGV";
             this.SalaryDGV.Size = new System.Drawing.Size(1410, 418);
             this.SalaryDGV.TabIndex = 74;
+            this.SalaryDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SalaryDGV_CellClick);
             // 
             // label18
             // 
@@ -326,22 +327,23 @@
             this.label18.TabIndex = 70;
             this.label18.Text = "Period";
             // 
-            // dtPeriod
+            // dtperiod
             // 
-            this.dtPeriod.Location = new System.Drawing.Point(571, 220);
-            this.dtPeriod.Name = "dtPeriod";
-            this.dtPeriod.Size = new System.Drawing.Size(238, 36);
-            this.dtPeriod.StateCommon.Border.Color1 = System.Drawing.Color.SpringGreen;
-            this.dtPeriod.StateCommon.Border.Color2 = System.Drawing.Color.SpringGreen;
-            this.dtPeriod.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.dtperiod.CalendarTodayDate = new System.DateTime(2024, 4, 30, 0, 0, 0, 0);
+            this.dtperiod.Location = new System.Drawing.Point(571, 220);
+            this.dtperiod.Name = "dtperiod";
+            this.dtperiod.Size = new System.Drawing.Size(238, 36);
+            this.dtperiod.StateCommon.Border.Color1 = System.Drawing.Color.SpringGreen;
+            this.dtperiod.StateCommon.Border.Color2 = System.Drawing.Color.SpringGreen;
+            this.dtperiod.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.dtPeriod.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.dtPeriod.StateCommon.Border.Rounding = 20;
-            this.dtPeriod.StateCommon.Content.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtPeriod.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.dtPeriod.TabIndex = 69;
-            this.dtPeriod.ValueNullable = new System.DateTime(2024, 4, 17, 12, 18, 12, 0);
+            this.dtperiod.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.dtperiod.StateCommon.Border.Rounding = 20;
+            this.dtperiod.StateCommon.Content.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtperiod.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.dtperiod.TabIndex = 69;
+            this.dtperiod.ValueNullable = new System.DateTime(2024, 4, 17, 12, 18, 12, 0);
             // 
             // txtBonous
             // 
@@ -621,40 +623,41 @@
             this.btnCalculate.Values.Text = "Calculate";
             this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
-            // btnEdit
+            // btnDelete
             // 
-            this.btnEdit.Location = new System.Drawing.Point(359, 303);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(118, 33);
-            this.btnEdit.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.btnEdit.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.btnEdit.StateCommon.Border.Color1 = System.Drawing.Color.SpringGreen;
-            this.btnEdit.StateCommon.Border.Color2 = System.Drawing.Color.SpringGreen;
-            this.btnEdit.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.btnDelete.Location = new System.Drawing.Point(359, 303);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(118, 33);
+            this.btnDelete.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.btnDelete.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.btnDelete.StateCommon.Border.Color1 = System.Drawing.Color.SpringGreen;
+            this.btnDelete.StateCommon.Border.Color2 = System.Drawing.Color.SpringGreen;
+            this.btnDelete.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnEdit.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnEdit.StateCommon.Border.Rounding = 15;
-            this.btnEdit.StateCommon.Border.Width = 1;
-            this.btnEdit.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnEdit.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.SpringGreen;
-            this.btnEdit.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.SpringGreen;
-            this.btnEdit.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.StatePressed.Back.Color1 = System.Drawing.Color.Lime;
-            this.btnEdit.StatePressed.Back.Color2 = System.Drawing.Color.Lime;
-            this.btnEdit.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btnEdit.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.btnEdit.StateTracking.Back.Color1 = System.Drawing.Color.Lime;
-            this.btnEdit.StateTracking.Back.Color2 = System.Drawing.Color.Lime;
-            this.btnEdit.StateTracking.Border.Color1 = System.Drawing.Color.Lime;
-            this.btnEdit.StateTracking.Border.Color2 = System.Drawing.Color.Lime;
-            this.btnEdit.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.btnDelete.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnDelete.StateCommon.Border.Rounding = 15;
+            this.btnDelete.StateCommon.Border.Width = 1;
+            this.btnDelete.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnDelete.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.SpringGreen;
+            this.btnDelete.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.SpringGreen;
+            this.btnDelete.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.StatePressed.Back.Color1 = System.Drawing.Color.Lime;
+            this.btnDelete.StatePressed.Back.Color2 = System.Drawing.Color.Lime;
+            this.btnDelete.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnDelete.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnDelete.StateTracking.Back.Color1 = System.Drawing.Color.Lime;
+            this.btnDelete.StateTracking.Back.Color2 = System.Drawing.Color.Lime;
+            this.btnDelete.StateTracking.Border.Color1 = System.Drawing.Color.Lime;
+            this.btnDelete.StateTracking.Border.Color2 = System.Drawing.Color.Lime;
+            this.btnDelete.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnEdit.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btnEdit.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.btnEdit.TabIndex = 84;
-            this.btnEdit.Values.Text = "Edit";
+            this.btnDelete.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnDelete.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnDelete.TabIndex = 84;
+            this.btnDelete.Values.Text = "Delete";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSave
             // 
@@ -885,7 +888,7 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnCalculate);
-            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtpresence);
             this.Controls.Add(this.label21);
@@ -897,7 +900,7 @@
             this.Controls.Add(this.logoutPIC);
             this.Controls.Add(this.SalaryDGV);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.dtPeriod);
+            this.Controls.Add(this.dtperiod);
             this.Controls.Add(this.txtBonous);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.TSalaryTb);
@@ -961,7 +964,7 @@
         private System.Windows.Forms.PictureBox logoutPIC;
         private System.Windows.Forms.DataGridView SalaryDGV;
         private System.Windows.Forms.Label label18;
-        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dtPeriod;
+        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dtperiod;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtBonous;
         private System.Windows.Forms.Label label17;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox TSalaryTb;
@@ -982,7 +985,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtpresence;
         private System.Windows.Forms.Label label21;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnCalculate;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnEdit;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnDelete;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnSave;
         private System.Windows.Forms.PictureBox picSearch;
         private System.Windows.Forms.Label label10;
