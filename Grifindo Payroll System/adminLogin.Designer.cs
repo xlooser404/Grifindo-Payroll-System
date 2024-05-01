@@ -33,18 +33,21 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtContact = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtPassword = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.txtBSalary = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtUserName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.btnAdd = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.label3 = new System.Windows.Forms.Label();
+            this.showPass = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.closePIC = new System.Windows.Forms.PictureBox();
+            this.LnkClearData = new System.Windows.Forms.LinkLabel();
+            this.btnLogin = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            ((System.ComponentModel.ISupportInitialize)(this.showPass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -97,20 +100,20 @@
             this.label2.TabIndex = 27;
             this.label2.Text = "Get Starting...";
             // 
-            // txtContact
+            // txtPassword
             // 
-            this.txtContact.Location = new System.Drawing.Point(72, 296);
-            this.txtContact.Name = "txtContact";
-            this.txtContact.Size = new System.Drawing.Size(246, 35);
-            this.txtContact.StateCommon.Border.Color1 = System.Drawing.Color.SpringGreen;
-            this.txtContact.StateCommon.Border.Color2 = System.Drawing.Color.SpringGreen;
-            this.txtContact.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtPassword.Location = new System.Drawing.Point(72, 296);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(246, 35);
+            this.txtPassword.StateCommon.Border.Color1 = System.Drawing.Color.SpringGreen;
+            this.txtPassword.StateCommon.Border.Color2 = System.Drawing.Color.SpringGreen;
+            this.txtPassword.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtContact.StateCommon.Border.Rounding = 20;
-            this.txtContact.StateCommon.Border.Width = 1;
-            this.txtContact.TabIndex = 45;
-            this.txtContact.Text = "Password";
+            this.txtPassword.StateCommon.Border.Rounding = 20;
+            this.txtPassword.StateCommon.Border.Width = 1;
+            this.txtPassword.TabIndex = 45;
+            this.txtPassword.Text = "Password";
             // 
             // label17
             // 
@@ -122,20 +125,20 @@
             this.label17.TabIndex = 44;
             this.label17.Text = "Password";
             // 
-            // txtBSalary
+            // txtUserName
             // 
-            this.txtBSalary.Location = new System.Drawing.Point(72, 236);
-            this.txtBSalary.Name = "txtBSalary";
-            this.txtBSalary.Size = new System.Drawing.Size(246, 35);
-            this.txtBSalary.StateCommon.Border.Color1 = System.Drawing.Color.SpringGreen;
-            this.txtBSalary.StateCommon.Border.Color2 = System.Drawing.Color.SpringGreen;
-            this.txtBSalary.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtUserName.Location = new System.Drawing.Point(72, 236);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(246, 35);
+            this.txtUserName.StateCommon.Border.Color1 = System.Drawing.Color.SpringGreen;
+            this.txtUserName.StateCommon.Border.Color2 = System.Drawing.Color.SpringGreen;
+            this.txtUserName.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtBSalary.StateCommon.Border.Rounding = 20;
-            this.txtBSalary.StateCommon.Border.Width = 1;
-            this.txtBSalary.TabIndex = 43;
-            this.txtBSalary.Text = "Enter UserName";
+            this.txtUserName.StateCommon.Border.Rounding = 20;
+            this.txtUserName.StateCommon.Border.Width = 1;
+            this.txtUserName.TabIndex = 43;
+            this.txtUserName.Text = "Enter UserName";
             // 
             // label14
             // 
@@ -147,28 +150,6 @@
             this.label14.TabIndex = 42;
             this.label14.Text = "User Name";
             // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(134, 370);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(118, 33);
-            this.btnAdd.StateCommon.Back.Color1 = System.Drawing.Color.SpringGreen;
-            this.btnAdd.StateCommon.Back.Color2 = System.Drawing.Color.SpringGreen;
-            this.btnAdd.StateCommon.Border.Color1 = System.Drawing.Color.ForestGreen;
-            this.btnAdd.StateCommon.Border.Color2 = System.Drawing.Color.ForestGreen;
-            this.btnAdd.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnAdd.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnAdd.StateCommon.Border.Rounding = 15;
-            this.btnAdd.StateCommon.Border.Width = 1;
-            this.btnAdd.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnAdd.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btnAdd.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.btnAdd.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.TabIndex = 47;
-            this.btnAdd.Values.Text = "Add";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -179,6 +160,17 @@
             this.label3.Size = new System.Drawing.Size(103, 22);
             this.label3.TabIndex = 48;
             this.label3.Text = "Show Password";
+            // 
+            // showPass
+            // 
+            this.showPass.Image = global::Grifindo_Payroll_System.Properties.Resources.eye;
+            this.showPass.Location = new System.Drawing.Point(284, 334);
+            this.showPass.Name = "showPass";
+            this.showPass.Size = new System.Drawing.Size(31, 19);
+            this.showPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.showPass.TabIndex = 53;
+            this.showPass.TabStop = false;
+            this.showPass.Click += new System.EventHandler(this.showPass_Click);
             // 
             // pictureBox5
             // 
@@ -193,7 +185,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Grifindo_Payroll_System.Properties.Resources.instagram;
-            this.pictureBox4.Location = new System.Drawing.Point(232, 424);
+            this.pictureBox4.Location = new System.Drawing.Point(232, 443);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(31, 31);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -203,7 +195,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Grifindo_Payroll_System.Properties.Resources.linkedin;
-            this.pictureBox3.Location = new System.Drawing.Point(179, 424);
+            this.pictureBox3.Location = new System.Drawing.Point(179, 443);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(31, 31);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -213,7 +205,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Grifindo_Payroll_System.Properties.Resources.github;
-            this.pictureBox2.Location = new System.Drawing.Point(126, 424);
+            this.pictureBox2.Location = new System.Drawing.Point(126, 443);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(31, 31);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -240,22 +232,71 @@
             this.closePIC.TabIndex = 28;
             this.closePIC.TabStop = false;
             // 
+            // LnkClearData
+            // 
+            this.LnkClearData.AutoSize = true;
+            this.LnkClearData.Location = new System.Drawing.Point(163, 409);
+            this.LnkClearData.Name = "LnkClearData";
+            this.LnkClearData.Size = new System.Drawing.Size(57, 13);
+            this.LnkClearData.TabIndex = 70;
+            this.LnkClearData.TabStop = true;
+            this.LnkClearData.Text = "Clear Data";
+            this.LnkClearData.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkClearData_LinkClicked);
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Location = new System.Drawing.Point(142, 371);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(97, 33);
+            this.btnLogin.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.btnLogin.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.btnLogin.StateCommon.Border.Color1 = System.Drawing.Color.SpringGreen;
+            this.btnLogin.StateCommon.Border.Color2 = System.Drawing.Color.SpringGreen;
+            this.btnLogin.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnLogin.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnLogin.StateCommon.Border.Rounding = 15;
+            this.btnLogin.StateCommon.Border.Width = 1;
+            this.btnLogin.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnLogin.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.SpringGreen;
+            this.btnLogin.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.SpringGreen;
+            this.btnLogin.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.StatePressed.Back.Color1 = System.Drawing.Color.Lime;
+            this.btnLogin.StatePressed.Back.Color2 = System.Drawing.Color.Lime;
+            this.btnLogin.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnLogin.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnLogin.StateTracking.Back.Color1 = System.Drawing.Color.Lime;
+            this.btnLogin.StateTracking.Back.Color2 = System.Drawing.Color.Lime;
+            this.btnLogin.StateTracking.Border.Color1 = System.Drawing.Color.Lime;
+            this.btnLogin.StateTracking.Border.Color2 = System.Drawing.Color.Lime;
+            this.btnLogin.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnLogin.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnLogin.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnLogin.TabIndex = 125;
+            this.btnLogin.Values.Text = "Login";
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
             // adminLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(843, 498);
+            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.LnkClearData);
+            this.Controls.Add(this.showPass);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.txtContact);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.txtBSalary);
+            this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.closePIC);
             this.Controls.Add(this.label2);
@@ -267,6 +308,7 @@
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "adminLogin";
+            ((System.ComponentModel.ISupportInitialize)(this.showPass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -285,16 +327,18 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox closePIC;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtContact;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtPassword;
         private System.Windows.Forms.Label label17;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtBSalary;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtUserName;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnAdd;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox showPass;
+        private System.Windows.Forms.LinkLabel LnkClearData;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnLogin;
     }
 }
