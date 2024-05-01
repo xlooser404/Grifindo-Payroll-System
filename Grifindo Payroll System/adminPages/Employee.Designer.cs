@@ -33,7 +33,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,7 +40,6 @@
             this.advancedPIC = new System.Windows.Forms.PictureBox();
             this.empPIC = new System.Windows.Forms.PictureBox();
             this.salaryPIC = new System.Windows.Forms.PictureBox();
-            this.bonousPIC = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -76,11 +74,12 @@
             this.picSearch = new System.Windows.Forms.PictureBox();
             this.logoutPIC = new System.Windows.Forms.PictureBox();
             this.closePIC = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.bonousPIC = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.advancedPIC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empPIC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salaryPIC)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bonousPIC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.homePIC)).BeginInit();
@@ -89,6 +88,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoutPIC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closePIC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bonousPIC)).BeginInit();
             this.SuspendLayout();
             // 
             // CommonPal
@@ -107,9 +107,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.bonousPIC);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
@@ -117,7 +118,6 @@
             this.panel1.Controls.Add(this.advancedPIC);
             this.panel1.Controls.Add(this.empPIC);
             this.panel1.Controls.Add(this.salaryPIC);
-            this.panel1.Controls.Add(this.bonousPIC);
             this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.pictureBox3);
@@ -144,16 +144,6 @@
             this.label8.Size = new System.Drawing.Size(44, 19);
             this.label8.TabIndex = 17;
             this.label8.Text = "Salary";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(15, 439);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(50, 19);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Bonous";
             // 
             // label6
             // 
@@ -224,16 +214,6 @@
             this.salaryPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.salaryPIC.TabIndex = 9;
             this.salaryPIC.TabStop = false;
-            // 
-            // bonousPIC
-            // 
-            this.bonousPIC.Image = global::Grifindo_Payroll_System.Properties.Resources.salary;
-            this.bonousPIC.Location = new System.Drawing.Point(22, 403);
-            this.bonousPIC.Name = "bonousPIC";
-            this.bonousPIC.Size = new System.Drawing.Size(34, 33);
-            this.bonousPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bonousPIC.TabIndex = 8;
-            this.bonousPIC.TabStop = false;
             // 
             // pictureBox5
             // 
@@ -720,6 +700,26 @@
             this.closePIC.TabIndex = 3;
             this.closePIC.TabStop = false;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(21, 434);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 19);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Toys";
+            // 
+            // bonousPIC
+            // 
+            this.bonousPIC.Image = global::Grifindo_Payroll_System.Properties.Resources.box;
+            this.bonousPIC.Location = new System.Drawing.Point(21, 398);
+            this.bonousPIC.Name = "bonousPIC";
+            this.bonousPIC.Size = new System.Drawing.Size(34, 33);
+            this.bonousPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bonousPIC.TabIndex = 18;
+            this.bonousPIC.TabStop = false;
+            // 
             // Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -768,7 +768,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.advancedPIC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empPIC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salaryPIC)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bonousPIC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.homePIC)).EndInit();
@@ -777,6 +776,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoutPIC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.closePIC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bonousPIC)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -788,7 +788,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -796,7 +795,6 @@
         private System.Windows.Forms.PictureBox advancedPIC;
         private System.Windows.Forms.PictureBox empPIC;
         private System.Windows.Forms.PictureBox salaryPIC;
-        private System.Windows.Forms.PictureBox bonousPIC;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -831,5 +829,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtSearch;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.PictureBox picSearch;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox bonousPIC;
     }
 }
