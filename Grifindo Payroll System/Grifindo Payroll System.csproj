@@ -130,6 +130,42 @@
     <Compile Include="managerLogin.Designer.cs">
       <DependentUpon>managerLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="managerPages\advanced.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="managerPages\advanced.Designer.cs">
+      <DependentUpon>advanced.cs</DependentUpon>
+    </Compile>
+    <Compile Include="managerPages\attendence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="managerPages\attendence.Designer.cs">
+      <DependentUpon>attendence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="managerPages\bonous.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="managerPages\bonous.Designer.cs">
+      <DependentUpon>bonous.cs</DependentUpon>
+    </Compile>
+    <Compile Include="managerPages\employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="managerPages\employee.Designer.cs">
+      <DependentUpon>employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="managerPages\salary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="managerPages\salary.Designer.cs">
+      <DependentUpon>salary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="managerPages\toyreg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="managerPages\toyreg.Designer.cs">
+      <DependentUpon>toyreg.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="adminLogin.resx">
@@ -164,6 +200,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="managerLogin.resx">
       <DependentUpon>managerLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="managerPages\advanced.resx">
+      <DependentUpon>advanced.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="managerPages\attendence.resx">
+      <DependentUpon>attendence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="managerPages\bonous.resx">
+      <DependentUpon>bonous.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="managerPages\employee.resx">
+      <DependentUpon>employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="managerPages\salary.resx">
+      <DependentUpon>salary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="managerPages\toyreg.resx">
+      <DependentUpon>toyreg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -227,9 +281,7 @@
   <ItemGroup>
     <None Include="Resources\resume.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="managerPages\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\github.png" />
   </ItemGroup>
