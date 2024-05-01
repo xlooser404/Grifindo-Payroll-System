@@ -243,5 +243,22 @@ namespace Grifindo_Payroll_System.adminPages
             // Clear form fields for the next entry
             Clear_Data();
         }
+
+        private void picSearch_Click(object sender, EventArgs e)
+        {
+            TextboxFilter();
+        }
+
+        private void homePIC_Click(object sender, EventArgs e)
+        {
+            adminHome adminHome = new adminHome();      
+            adminHome.Show();
+            this.Close();
+        }
+
+        private void closePIC_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

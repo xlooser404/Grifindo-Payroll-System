@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
+using Grifindo_Payroll_System.adminPages;
 
 namespace Grifindo_Payroll_System.Pages
 {
@@ -319,6 +320,60 @@ namespace Grifindo_Payroll_System.Pages
         private void picSearch_Click(object sender, EventArgs e)
         {
             TextboxFilter();
+        }
+
+        private void logoutPIC_Click(object sender, EventArgs e)
+        {
+            loginselection loginselection = new loginselection();
+            loginselection.Show();
+            this.Hide();
+        }
+
+        private void txtlogout_Click(object sender, EventArgs e)
+        {
+            loginselection loginselection = new loginselection();
+            loginselection.Show();
+            this.Hide();
+        }
+
+        private void homePIC_Click(object sender, EventArgs e)
+        {
+            adminHome adminHome = new adminHome();
+            adminHome.Show();
+            this.Hide();
+        }
+
+        private void empPIC_Click(object sender, EventArgs e)
+        {
+            Employee employee = new Employee();
+            employee.Show();
+            this.Hide();
+        }
+
+        private void bonousPIC_Click(object sender, EventArgs e)
+        {
+            ToyReg toyReg = new ToyReg();
+            toyReg.Show();
+            this.Hide();
+        }
+
+        private void salaryPIC_Click(object sender, EventArgs e)
+        {
+            Salary salary = new Salary();
+            salary.Show();
+            this.Hide();
+        }
+
+        private void advancedPIC_Click(object sender, EventArgs e)
+        {
+            Advanced advanced = new Advanced(); 
+            advanced.Show();
+            this.Hide();
+        }
+
+        private void closePIC_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

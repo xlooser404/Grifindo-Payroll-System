@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.CommonPal = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.bonousPIC = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -71,9 +73,9 @@
             this.picSearch = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
             this.txtSearch = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.bonousPIC = new System.Windows.Forms.PictureBox();
+            this.closePIC = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bonousPIC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.advancedPIC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empPIC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salaryPIC)).BeginInit();
@@ -84,7 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.AttendenceDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoutPIC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bonousPIC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closePIC)).BeginInit();
             this.SuspendLayout();
             // 
             // CommonPal
@@ -122,6 +124,27 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(76, 851);
             this.panel1.TabIndex = 3;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(21, 435);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 19);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Toys";
+            // 
+            // bonousPIC
+            // 
+            this.bonousPIC.Image = global::Grifindo_Payroll_System.Properties.Resources.box;
+            this.bonousPIC.Location = new System.Drawing.Point(21, 399);
+            this.bonousPIC.Name = "bonousPIC";
+            this.bonousPIC.Size = new System.Drawing.Size(34, 33);
+            this.bonousPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bonousPIC.TabIndex = 18;
+            this.bonousPIC.TabStop = false;
+            this.bonousPIC.Click += new System.EventHandler(this.bonousPIC_Click);
             // 
             // panel2
             // 
@@ -190,6 +213,7 @@
             this.advancedPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.advancedPIC.TabIndex = 11;
             this.advancedPIC.TabStop = false;
+            this.advancedPIC.Click += new System.EventHandler(this.advancedPIC_Click);
             // 
             // empPIC
             // 
@@ -200,6 +224,7 @@
             this.empPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.empPIC.TabIndex = 10;
             this.empPIC.TabStop = false;
+            this.empPIC.Click += new System.EventHandler(this.empPIC_Click);
             // 
             // salaryPIC
             // 
@@ -210,6 +235,7 @@
             this.salaryPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.salaryPIC.TabIndex = 9;
             this.salaryPIC.TabStop = false;
+            this.salaryPIC.Click += new System.EventHandler(this.salaryPIC_Click);
             // 
             // pictureBox5
             // 
@@ -250,6 +276,7 @@
             this.homePIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.homePIC.TabIndex = 2;
             this.homePIC.TabStop = false;
+            this.homePIC.Click += new System.EventHandler(this.homePIC_Click);
             // 
             // cbEmpID
             // 
@@ -503,6 +530,7 @@
             this.txtlogout.Size = new System.Drawing.Size(51, 19);
             this.txtlogout.TabIndex = 104;
             this.txtlogout.Text = "Log Out";
+            this.txtlogout.Click += new System.EventHandler(this.txtlogout_Click);
             // 
             // logoutPIC
             // 
@@ -513,6 +541,7 @@
             this.logoutPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logoutPIC.TabIndex = 103;
             this.logoutPIC.TabStop = false;
+            this.logoutPIC.Click += new System.EventHandler(this.logoutPIC_Click);
             // 
             // btnUpdate
             // 
@@ -659,25 +688,16 @@
             this.txtSearch.TabIndex = 108;
             this.txtSearch.Text = "type Nic";
             // 
-            // label7
+            // closePIC
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Poppins SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(21, 435);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 19);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "Toys";
-            // 
-            // bonousPIC
-            // 
-            this.bonousPIC.Image = global::Grifindo_Payroll_System.Properties.Resources.box;
-            this.bonousPIC.Location = new System.Drawing.Point(21, 399);
-            this.bonousPIC.Name = "bonousPIC";
-            this.bonousPIC.Size = new System.Drawing.Size(34, 33);
-            this.bonousPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bonousPIC.TabIndex = 18;
-            this.bonousPIC.TabStop = false;
+            this.closePIC.Image = global::Grifindo_Payroll_System.Properties.Resources.close;
+            this.closePIC.Location = new System.Drawing.Point(1558, 12);
+            this.closePIC.Name = "closePIC";
+            this.closePIC.Size = new System.Drawing.Size(36, 34);
+            this.closePIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.closePIC.TabIndex = 111;
+            this.closePIC.TabStop = false;
+            this.closePIC.Click += new System.EventHandler(this.closePIC_Click);
             // 
             // Attendance
             // 
@@ -685,6 +705,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1606, 840);
+            this.Controls.Add(this.closePIC);
             this.Controls.Add(this.picSearch);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.txtSearch);
@@ -721,6 +742,7 @@
             this.Text = "Attendance";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bonousPIC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.advancedPIC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empPIC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salaryPIC)).EndInit();
@@ -731,7 +753,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.AttendenceDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoutPIC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bonousPIC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closePIC)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -783,5 +805,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtSearch;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox bonousPIC;
+        private System.Windows.Forms.PictureBox closePIC;
     }
 }

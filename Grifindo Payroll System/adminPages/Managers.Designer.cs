@@ -88,6 +88,7 @@
             this.homePIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.homePIC.TabIndex = 15;
             this.homePIC.TabStop = false;
+            this.homePIC.Click += new System.EventHandler(this.homePIC_Click);
             // 
             // picSearch
             // 
@@ -98,6 +99,7 @@
             this.picSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picSearch.TabIndex = 109;
             this.picSearch.TabStop = false;
+            this.picSearch.Click += new System.EventHandler(this.picSearch_Click);
             // 
             // label10
             // 
@@ -352,6 +354,7 @@
             this.closePIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.closePIC.TabIndex = 94;
             this.closePIC.TabStop = false;
+            this.closePIC.Click += new System.EventHandler(this.closePIC_Click);
             // 
             // label15
             // 

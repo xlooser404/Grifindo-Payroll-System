@@ -243,5 +243,22 @@ namespace Grifindo_Payroll_System.adminPages
                 Connection.Close();
             } 
         }
+
+        private void homePIC_Click(object sender, EventArgs e)
+        {
+            adminHome adminHome = new adminHome();
+            adminHome.Show();
+            this.Hide();
+        }
+
+        private void picSearch_Click(object sender, EventArgs e)
+        {
+            TextboxFilter();
+        }
+
+        private void closePIC_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

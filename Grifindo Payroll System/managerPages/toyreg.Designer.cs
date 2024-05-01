@@ -203,6 +203,7 @@
             this.advancedPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.advancedPIC.TabIndex = 11;
             this.advancedPIC.TabStop = false;
+            this.advancedPIC.Click += new System.EventHandler(this.advancedPIC_Click);
             // 
             // empPIC
             // 
@@ -213,6 +214,7 @@
             this.empPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.empPIC.TabIndex = 10;
             this.empPIC.TabStop = false;
+            this.empPIC.Click += new System.EventHandler(this.empPIC_Click);
             // 
             // salaryPIC
             // 
@@ -223,6 +225,7 @@
             this.salaryPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.salaryPIC.TabIndex = 9;
             this.salaryPIC.TabStop = false;
+            this.salaryPIC.Click += new System.EventHandler(this.salaryPIC_Click);
             // 
             // bonousPIC
             // 
@@ -233,6 +236,7 @@
             this.bonousPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bonousPIC.TabIndex = 8;
             this.bonousPIC.TabStop = false;
+            this.bonousPIC.Click += new System.EventHandler(this.bonousPIC_Click);
             // 
             // pictureBox5
             // 
@@ -243,6 +247,7 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 7;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // label2
             // 
@@ -273,6 +278,7 @@
             this.homePIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.homePIC.TabIndex = 2;
             this.homePIC.TabStop = false;
+            this.homePIC.Click += new System.EventHandler(this.homePIC_Click);
             // 
             // txtQUT
             // 
@@ -309,6 +315,7 @@
             this.txtlogout.Size = new System.Drawing.Size(51, 19);
             this.txtlogout.TabIndex = 123;
             this.txtlogout.Text = "Log Out";
+            this.txtlogout.Click += new System.EventHandler(this.txtlogout_Click);
             // 
             // logoutPIC
             // 
@@ -319,6 +326,7 @@
             this.logoutPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logoutPIC.TabIndex = 122;
             this.logoutPIC.TabStop = false;
+            this.logoutPIC.Click += new System.EventHandler(this.logoutPIC_Click);
             // 
             // picSearch
             // 
@@ -329,6 +337,7 @@
             this.picSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picSearch.TabIndex = 121;
             this.picSearch.TabStop = false;
+            this.picSearch.Click += new System.EventHandler(this.picSearch_Click);
             // 
             // label14
             // 
@@ -390,6 +399,7 @@
             this.btnDelete.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btnDelete.TabIndex = 118;
             this.btnDelete.Values.Text = "Delete";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -425,6 +435,7 @@
             this.btnEdit.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btnEdit.TabIndex = 117;
             this.btnEdit.Values.Text = "Edit";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnSave
             // 
@@ -460,6 +471,7 @@
             this.btnSave.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btnSave.TabIndex = 116;
             this.btnSave.Values.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // ToysDGV
             // 
@@ -469,6 +481,7 @@
             this.ToysDGV.Name = "ToysDGV";
             this.ToysDGV.Size = new System.Drawing.Size(1410, 418);
             this.ToysDGV.TabIndex = 115;
+            this.ToysDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ToysDGV_CellClick);
             // 
             // label15
             // 
@@ -688,12 +701,13 @@
             // closePIC
             // 
             this.closePIC.Image = global::Grifindo_Payroll_System.Properties.Resources.close;
-            this.closePIC.Location = new System.Drawing.Point(1551, 11);
+            this.closePIC.Location = new System.Drawing.Point(1562, 9);
             this.closePIC.Name = "closePIC";
-            this.closePIC.Size = new System.Drawing.Size(44, 44);
+            this.closePIC.Size = new System.Drawing.Size(33, 38);
             this.closePIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.closePIC.TabIndex = 98;
             this.closePIC.TabStop = false;
+            this.closePIC.Click += new System.EventHandler(this.closePIC_Click);
             // 
             // toyreg
             // 

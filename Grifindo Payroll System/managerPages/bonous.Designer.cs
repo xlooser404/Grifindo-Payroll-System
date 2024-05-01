@@ -78,6 +78,7 @@
             this.picSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picSearch.TabIndex = 111;
             this.picSearch.TabStop = false;
+            this.picSearch.Click += new System.EventHandler(this.picSearch_Click);
             // 
             // label10
             // 
@@ -113,6 +114,7 @@
             this.BonousDGV.Name = "BonousDGV";
             this.BonousDGV.Size = new System.Drawing.Size(765, 417);
             this.BonousDGV.TabIndex = 108;
+            this.BonousDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BonousDGV_CellClick);
             // 
             // btnDelete
             // 
@@ -148,6 +150,7 @@
             this.btnDelete.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btnDelete.TabIndex = 107;
             this.btnDelete.Values.Text = "Delete";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -183,6 +186,7 @@
             this.btnEdit.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btnEdit.TabIndex = 106;
             this.btnEdit.Values.Text = "Edit";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnSave
             // 
@@ -218,6 +222,7 @@
             this.btnSave.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btnSave.TabIndex = 105;
             this.btnSave.Values.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtAmount
             // 
@@ -328,6 +333,7 @@
             this.closePIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.closePIC.TabIndex = 96;
             this.closePIC.TabStop = false;
+            this.closePIC.Click += new System.EventHandler(this.closePIC_Click);
             // 
             // label15
             // 
@@ -358,6 +364,7 @@
             this.label3.Size = new System.Drawing.Size(87, 19);
             this.label3.TabIndex = 93;
             this.label3.Text = "Back to Home";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // homePIC
             // 
@@ -368,6 +375,7 @@
             this.homePIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.homePIC.TabIndex = 92;
             this.homePIC.TabStop = false;
+            this.homePIC.Click += new System.EventHandler(this.homePIC_Click);
             // 
             // bonous
             // 

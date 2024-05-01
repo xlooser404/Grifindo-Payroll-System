@@ -203,6 +203,7 @@
             this.advancedPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.advancedPIC.TabIndex = 11;
             this.advancedPIC.TabStop = false;
+            this.advancedPIC.Click += new System.EventHandler(this.advancedPIC_Click);
             // 
             // empPIC
             // 
@@ -213,6 +214,7 @@
             this.empPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.empPIC.TabIndex = 10;
             this.empPIC.TabStop = false;
+            this.empPIC.Click += new System.EventHandler(this.empPIC_Click);
             // 
             // salaryPIC
             // 
@@ -223,6 +225,7 @@
             this.salaryPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.salaryPIC.TabIndex = 9;
             this.salaryPIC.TabStop = false;
+            this.salaryPIC.Click += new System.EventHandler(this.salaryPIC_Click);
             // 
             // bonousPIC
             // 
@@ -243,6 +246,7 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 7;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // label2
             // 
@@ -273,6 +277,7 @@
             this.homePIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.homePIC.TabIndex = 2;
             this.homePIC.TabStop = false;
+            this.homePIC.Click += new System.EventHandler(this.homePIC_Click);
             // 
             // closePIC
             // 
@@ -283,6 +288,7 @@
             this.closePIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.closePIC.TabIndex = 51;
             this.closePIC.TabStop = false;
+            this.closePIC.Click += new System.EventHandler(this.closePIC_Click);
             // 
             // txtName
             // 
@@ -626,6 +632,7 @@
             this.picSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picSearch.TabIndex = 93;
             this.picSearch.TabStop = false;
+            this.picSearch.Click += new System.EventHandler(this.picSearch_Click);
             // 
             // label14
             // 
@@ -662,6 +669,7 @@
             this.txtlogout.Size = new System.Drawing.Size(51, 19);
             this.txtlogout.TabIndex = 95;
             this.txtlogout.Text = "Log Out";
+            this.txtlogout.Click += new System.EventHandler(this.txtlogout_Click);
             // 
             // logoutPIC
             // 
@@ -672,6 +680,7 @@
             this.logoutPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logoutPIC.TabIndex = 94;
             this.logoutPIC.TabStop = false;
+            this.logoutPIC.Click += new System.EventHandler(this.logoutPIC_Click);
             // 
             // txtQUT
             // 

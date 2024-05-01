@@ -142,6 +142,7 @@
             this.bonousPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bonousPIC.TabIndex = 18;
             this.bonousPIC.TabStop = false;
+            this.bonousPIC.Click += new System.EventHandler(this.bonousPIC_Click);
             // 
             // panel2
             // 
@@ -210,6 +211,7 @@
             this.advancedPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.advancedPIC.TabIndex = 11;
             this.advancedPIC.TabStop = false;
+            this.advancedPIC.Click += new System.EventHandler(this.advancedPIC_Click);
             // 
             // empPIC
             // 
@@ -220,6 +222,7 @@
             this.empPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.empPIC.TabIndex = 10;
             this.empPIC.TabStop = false;
+            this.empPIC.Click += new System.EventHandler(this.empPIC_Click);
             // 
             // salaryPIC
             // 
@@ -230,6 +233,7 @@
             this.salaryPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.salaryPIC.TabIndex = 9;
             this.salaryPIC.TabStop = false;
+            this.salaryPIC.Click += new System.EventHandler(this.salaryPIC_Click);
             // 
             // pictureBox5
             // 
@@ -270,6 +274,7 @@
             this.homePIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.homePIC.TabIndex = 2;
             this.homePIC.TabStop = false;
+            this.homePIC.Click += new System.EventHandler(this.homePIC_Click);
             // 
             // picSearch
             // 
@@ -280,6 +285,7 @@
             this.picSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picSearch.TabIndex = 137;
             this.picSearch.TabStop = false;
+            this.picSearch.Click += new System.EventHandler(this.picSearch_Click);
             // 
             // label19
             // 
@@ -341,6 +347,7 @@
             this.btnUpdate.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btnUpdate.TabIndex = 134;
             this.btnUpdate.Values.Text = "Update";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -376,6 +383,7 @@
             this.btnDelete.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btnDelete.TabIndex = 133;
             this.btnDelete.Values.Text = "Delete";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSave
             // 
@@ -411,6 +419,7 @@
             this.btnSave.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btnSave.TabIndex = 132;
             this.btnSave.Values.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtlogout
             // 
@@ -421,6 +430,7 @@
             this.txtlogout.Size = new System.Drawing.Size(51, 19);
             this.txtlogout.TabIndex = 131;
             this.txtlogout.Text = "Log Out";
+            this.txtlogout.Click += new System.EventHandler(this.txtlogout_Click);
             // 
             // logoutPIC
             // 
@@ -431,6 +441,7 @@
             this.logoutPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logoutPIC.TabIndex = 130;
             this.logoutPIC.TabStop = false;
+            this.logoutPIC.Click += new System.EventHandler(this.logoutPIC_Click);
             // 
             // AttendenceDGV
             // 
@@ -440,6 +451,7 @@
             this.AttendenceDGV.Name = "AttendenceDGV";
             this.AttendenceDGV.Size = new System.Drawing.Size(1410, 418);
             this.AttendenceDGV.TabIndex = 129;
+            this.AttendenceDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AttendenceDGV_CellClick);
             // 
             // txtContact
             // 
@@ -636,6 +648,7 @@
             this.cbEmpID.StateCommon.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.cbEmpID.TabIndex = 114;
             this.cbEmpID.Text = "EmpID";
+            this.cbEmpID.SelectionChangeCommitted += new System.EventHandler(this.cbEmpID_SelectionChangeCommitted);
             // 
             // label20
             // 

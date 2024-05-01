@@ -216,6 +216,7 @@
             this.advancedPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.advancedPIC.TabIndex = 11;
             this.advancedPIC.TabStop = false;
+            this.advancedPIC.Click += new System.EventHandler(this.advancedPIC_Click);
             // 
             // empPIC
             // 
@@ -226,6 +227,7 @@
             this.empPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.empPIC.TabIndex = 10;
             this.empPIC.TabStop = false;
+            this.empPIC.Click += new System.EventHandler(this.empPIC_Click);
             // 
             // salaryPIC
             // 
@@ -246,6 +248,7 @@
             this.bonousPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bonousPIC.TabIndex = 8;
             this.bonousPIC.TabStop = false;
+            this.bonousPIC.Click += new System.EventHandler(this.bonousPIC_Click);
             // 
             // pictureBox5
             // 
@@ -256,6 +259,7 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 7;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // label2
             // 
@@ -286,6 +290,7 @@
             this.homePIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.homePIC.TabIndex = 2;
             this.homePIC.TabStop = false;
+            this.homePIC.Click += new System.EventHandler(this.homePIC_Click);
             // 
             // OTratrTb
             // 
@@ -355,6 +360,7 @@
             this.cbAttend.StateCommon.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.cbAttend.TabIndex = 134;
             this.cbAttend.Text = "AttedenceID";
+            this.cbAttend.SelectionChangeCommitted += new System.EventHandler(this.cbAttend_SelectionChangeCommitted);
             // 
             // label22
             // 
@@ -411,6 +417,7 @@
             this.cbBonousName.StateCommon.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.cbBonousName.TabIndex = 130;
             this.cbBonousName.Text = "Bonous Name";
+            this.cbBonousName.SelectionChangeCommitted += new System.EventHandler(this.cbBonousName_SelectionChangeCommitted);
             // 
             // label11
             // 
@@ -431,6 +438,7 @@
             this.picSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picSearch.TabIndex = 128;
             this.picSearch.TabStop = false;
+            this.picSearch.Click += new System.EventHandler(this.picSearch_Click);
             // 
             // label10
             // 
@@ -492,6 +500,7 @@
             this.btnCalculate.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btnCalculate.TabIndex = 125;
             this.btnCalculate.Values.Text = "Calculate";
+            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
             // btnDelete
             // 
@@ -527,6 +536,7 @@
             this.btnDelete.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btnDelete.TabIndex = 124;
             this.btnDelete.Values.Text = "Delete";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSave
             // 
@@ -562,6 +572,7 @@
             this.btnSave.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btnSave.TabIndex = 123;
             this.btnSave.Values.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtpresence
             // 
@@ -609,6 +620,7 @@
             this.cbEmpID.StateCommon.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.cbEmpID.TabIndex = 120;
             this.cbEmpID.Text = "EmpID";
+            this.cbEmpID.SelectionChangeCommitted += new System.EventHandler(this.cbEmpID_SelectionChangeCommitted);
             // 
             // label20
             // 
@@ -654,6 +666,7 @@
             this.txtlogout.Size = new System.Drawing.Size(51, 19);
             this.txtlogout.TabIndex = 116;
             this.txtlogout.Text = "Log Out";
+            this.txtlogout.Click += new System.EventHandler(this.txtlogout_Click);
             // 
             // logoutPIC
             // 
@@ -664,6 +677,7 @@
             this.logoutPIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logoutPIC.TabIndex = 115;
             this.logoutPIC.TabStop = false;
+            this.logoutPIC.Click += new System.EventHandler(this.logoutPIC_Click);
             // 
             // SalaryDGV
             // 
@@ -673,6 +687,7 @@
             this.SalaryDGV.Name = "SalaryDGV";
             this.SalaryDGV.Size = new System.Drawing.Size(1410, 418);
             this.SalaryDGV.TabIndex = 114;
+            this.SalaryDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SalaryDGV_CellClick);
             // 
             // label18
             // 
@@ -854,12 +869,13 @@
             // closePIC
             // 
             this.closePIC.Image = global::Grifindo_Payroll_System.Properties.Resources.close;
-            this.closePIC.Location = new System.Drawing.Point(1550, 8);
+            this.closePIC.Location = new System.Drawing.Point(1560, 12);
             this.closePIC.Name = "closePIC";
-            this.closePIC.Size = new System.Drawing.Size(44, 44);
+            this.closePIC.Size = new System.Drawing.Size(34, 34);
             this.closePIC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.closePIC.TabIndex = 99;
             this.closePIC.TabStop = false;
+            this.closePIC.Click += new System.EventHandler(this.closePIC_Click);
             // 
             // salary
             // 
