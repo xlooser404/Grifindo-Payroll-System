@@ -75,6 +75,7 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.logoutPIC = new System.Windows.Forms.PictureBox();
             this.closePIC = new System.Windows.Forms.PictureBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.advancedPIC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empPIC)).BeginInit();
@@ -592,12 +593,23 @@
             this.closePIC.TabStop = false;
             this.closePIC.Click += new System.EventHandler(this.closePIC_Click);
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Poppins SemiBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(145, 92);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(210, 37);
+            this.label13.TabIndex = 29;
+            this.label13.Text = "Admin Dashboard";
+            // 
             // adminHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1606, 840);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.mngrPIC);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.mgmtoyPIC);
@@ -694,6 +706,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox mngrPIC;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label13;
     }
 }
 
