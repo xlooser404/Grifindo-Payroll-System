@@ -18,6 +18,7 @@ namespace Grifindo_Payroll_System.adminPages
         public Managers()
         {
             InitializeComponent();
+            ManagerList();
         }
 
         // Sql Data Connection
