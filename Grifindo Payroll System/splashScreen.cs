@@ -18,6 +18,7 @@ namespace Grifindo_Payroll_System
             InitializeComponent();
         }
 
+        // Timer Click Event
         private void Timer_Tick(object sender, EventArgs e)
         {
             Timer.Enabled = true;
