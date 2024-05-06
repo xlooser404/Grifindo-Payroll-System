@@ -36,8 +36,8 @@ namespace Grifindo_Payroll_System
             {
                 MessageBox.Show("Login Successfull");
                 this.Hide();
-                adminHome adminHome = new adminHome();
-                adminHome.Show();
+                managerHome mngHome = new managerHome();
+                mngHome.Show();
             }
             else
             {
